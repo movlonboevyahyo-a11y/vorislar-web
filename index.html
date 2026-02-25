@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <title>Vorislar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>📚 Vorislar Platformasi</h1>
+</header>
+
+<nav>
+  <button onclick="showSection('home')">Bosh sahifa</button>
+  <button onclick="showSection('tests')">Testlar</button>
+  <button onclick="showSection('essay')">Esse</button>
+  <button onclick="showSection('dictionary')">Lug‘at</button>
+</nav>
+
+<main>
+  <section id="home">
+    <h2>Xush kelibsiz</h2>
+    <p>Bu Vorislar ta’lim platformasi.</p>
+  </section>
+
+  <section id="tests" class="hidden">
+    <h2>Test bo‘limi</h2>
+    <p>Tez orada testlar qo‘shiladi.</p>
+  </section>
+
+  <section id="essay" class="hidden">
+    <h2>Esse bo‘limi</h2>
+    <textarea placeholder="Esseni yozing..."></textarea>
+    <br><br>
+    <button>Yuborish</button>
+  </section>
+
+  <section id="dictionary" class="hidden">
+    <h2>Lug‘at</h2>
+    <p>Bugungi so‘z: Ma'rifat</p>
+  </section>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
