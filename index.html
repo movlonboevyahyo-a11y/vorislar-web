@@ -37,13 +37,13 @@ button {
 
 <textarea id="essay" placeholder="Esse yozing..."></textarea>
 <br>
-<button onclick="sendEssay()">Yuborish</button>
+<button id="sendBtn">Yuborish</button>
 
 <script>
 const tg = window.Telegram.WebApp;
 tg.expand();
 
-function sendEssay() {
+document.getElementById("sendBtn").addEventListener("click", function() {
     const text = document.getElementById("essay").value;
 
     if (!text) {
@@ -51,8 +51,10 @@ function sendEssay() {
         return;
     }
 
-    tg.sendData(text);   // <<< MUHIM QATOR
-}
+    console.log("Yuborilmoqda:", text);
+
+    tg.sendData(text);   // BOTGA KETADI
+});
 </script>
 
 </body>
