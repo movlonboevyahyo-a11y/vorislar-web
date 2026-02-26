@@ -2,46 +2,50 @@
 <html lang="uz">
 <head>
   <meta charset="UTF-8">
-  <title>Vorislar</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vorislar Platformasi</title>
+
+  <!-- Telegram Web App Script -->
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      border: none;
+      border-radius: 8px;
+      background: #2563eb;
+      color: white;
+      font-size: 16px;
+    }
+  </style>
 </head>
 <body>
 
-<header>
   <h1>📚 Vorislar Platformasi</h1>
-</header>
+  <p>Xush kelibsiz</p>
 
-<nav>
-  <button onclick="showSection('home')">Bosh sahifa</button>
-  <button onclick="showSection('tests')">Testlar</button>
-  <button onclick="showSection('essay')">Esse</button>
-  <button onclick="showSection('dictionary')">Lug‘at</button>
-</nav>
+  <div id="userInfo"></div>
 
-<main>
-  <section id="home">
-    <h2>Xush kelibsiz</h2>
-    <p>Bu Vorislar ta’lim platformasi.</p>
-  </section>
+  <script>
+    const tg = window.Telegram.WebApp;
+    tg.expand();
 
-  <section id="tests" class="hidden">
-    <h2>Test bo‘limi</h2>
-    <p>Tez orada testlar qo‘shiladi.</p>
-  </section>
+    const user = tg.initDataUnsafe.user;
 
-  <section id="essay" class="hidden">
-    <h2>Esse bo‘limi</h2>
-    <textarea placeholder="Esseni yozing..."></textarea>
-    <br><br>
-    <button>Yuborish</button>
-  </section>
+    if (user) {
+      document.getElementById("userInfo").innerHTML =
+        "👤 Foydalanuvchi: " + user.first_name;
+    }
+  </script>
 
-  <section id="dictionary" class="hidden">
-    <h2>Lug‘at</h2>
-    <p>Bugungi so‘z: Ma'rifat</p>
-  </section>
-</main>
-
-<script src="app.js"></script>
 </body>
 </html>
