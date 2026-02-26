@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vorislar Platformasi</title>
 
-  <!-- Telegram Web App Script -->
+  <!-- Telegram Web App -->
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
 
   <style>
@@ -15,16 +15,43 @@
       color: white;
       text-align: center;
       padding: 20px;
+      margin: 0;
+    }
+
+    h1 {
+      margin-top: 10px;
+    }
+
+    textarea {
+      width: 90%;
+      height: 120px;
+      border-radius: 8px;
+      padding: 10px;
+      border: none;
+      resize: none;
+      font-size: 14px;
     }
 
     button {
       padding: 10px 20px;
-      margin: 10px;
+      margin-top: 15px;
       border: none;
       border-radius: 8px;
       background: #2563eb;
       color: white;
       font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:active {
+      background: #1d4ed8;
+    }
+
+    .card {
+      margin-top: 20px;
+      padding: 15px;
+      background: #1e293b;
+      border-radius: 10px;
     }
   </style>
 </head>
@@ -35,15 +62,44 @@
 
   <div id="userInfo"></div>
 
+  <div class="card">
+    <h2>Esse yozish</h2>
+    <textarea id="essayText" placeholder="Esse yozing..."></textarea>
+    <br>
+    <button onclick="sendEssay()">📨 Yuborish</button>
+  </div>
+
   <script>
     const tg = window.Telegram.WebApp;
-    tg.expand();
+
+    tg.expand(); // WebApp to‘liq ochiladi
 
     const user = tg.initDataUnsafe.user;
 
     if (user) {
       document.getElementById("userInfo").innerHTML =
         "👤 Foydalanuvchi: " + user.first_name;
+    }
+
+    function sendEssay() {
+      const text = document.getElementById("essayText").value;
+
+      if (!text.trim()) {
+        alert("Esse yozing!");
+        return;
+      }
+
+      const data = {
+        type: "essay",
+        user_id: user ? user.id : null,
+        username: user ? user.username : null,
+        text: text
+      };
+
+      tg.sendData(JSON.stringify(data));
+
+      alert("Esse yuborildi!");
+      document.getElementById("essayText").value = "";
     }
   </script>
 
