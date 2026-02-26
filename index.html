@@ -1,107 +1,59 @@
 <!DOCTYPE html>
-<html lang="uz">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vorislar Platformasi</title>
-
-  <!-- Telegram Web App -->
-  <script src="https://telegram.org/js/telegram-web-app.js"></script>
-
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #0f172a;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin: 0;
-    }
-
-    h1 {
-      margin-top: 10px;
-    }
-
-    textarea {
-      width: 90%;
-      height: 120px;
-      border-radius: 8px;
-      padding: 10px;
-      border: none;
-      resize: none;
-      font-size: 14px;
-    }
-
-    button {
-      padding: 10px 20px;
-      margin-top: 15px;
-      border: none;
-      border-radius: 8px;
-      background: #2563eb;
-      color: white;
-      font-size: 16px;
-      cursor: pointer;
-    }
-
-    button:active {
-      background: #1d4ed8;
-    }
-
-    .card {
-      margin-top: 20px;
-      padding: 15px;
-      background: #1e293b;
-      border-radius: 10px;
-    }
-  </style>
+<meta charset="UTF-8">
+<title>Vorislar - Esse</title>
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<style>
+body {
+    background:#0f172a;
+    color:white;
+    font-family:sans-serif;
+    text-align:center;
+    padding:20px;
+}
+textarea {
+    width:100%;
+    height:150px;
+    border-radius:10px;
+    padding:10px;
+    font-size:16px;
+}
+button {
+    margin-top:15px;
+    padding:12px 20px;
+    border:none;
+    border-radius:10px;
+    background:#2563eb;
+    color:white;
+    font-size:16px;
+}
+</style>
 </head>
+
 <body>
 
-  <h1>📚 Vorislar Platformasi</h1>
-  <p>Xush kelibsiz</p>
+<h2>Esse yozish</h2>
 
-  <div id="userInfo"></div>
+<textarea id="essay" placeholder="Esse yozing..."></textarea>
+<br>
+<button onclick="sendEssay()">Yuborish</button>
 
-  <div class="card">
-    <h2>Esse yozish</h2>
-    <textarea id="essayText" placeholder="Esse yozing..."></textarea>
-    <br>
-    <button onclick="sendEssay()">📨 Yuborish</button>
-  </div>
+<script>
+const tg = window.Telegram.WebApp;
+tg.expand();
 
-  <script>
-    const tg = window.Telegram.WebApp;
+function sendEssay() {
+    const text = document.getElementById("essay").value;
 
-    tg.expand(); // WebApp to‘liq ochiladi
-
-    const user = tg.initDataUnsafe.user;
-
-    if (user) {
-      document.getElementById("userInfo").innerHTML =
-        "👤 Foydalanuvchi: " + user.first_name;
-    }
-
-    function sendEssay() {
-      const text = document.getElementById("essayText").value;
-
-      if (!text.trim()) {
-        alert("Esse yozing!");
+    if (!text) {
+        alert("Matn yozing!");
         return;
-      }
-
-      const data = {
-        type: "essay",
-        user_id: user ? user.id : null,
-        username: user ? user.username : null,
-        text: text
-      };
-
-      tg.sendData(JSON.stringify(data));
-
-      alert("Esse yuborildi!");
-      document.getElementById("essayText").value = "";
     }
-  </script>
+
+    tg.sendData(text);   // <<< MUHIM QATOR
+}
+</script>
 
 </body>
 </html>
