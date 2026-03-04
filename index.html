@@ -1,60 +1,30 @@
-<script>
+<!DOCTYPE html>
+<html lang="uz">
 
-// words.json faylidan so'zlarni yuklash
-let words = [];
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-fetch("words.json")
-  .then(response => response.json())
-  .then(data => {
-    words = data;
-  });
+<title>📖 O'zbek Lug'ati</title>
 
+<link rel="stylesheet" href="style.css">
 
-// Qidiruv funksiyasi
-function searchWord() {
+</head>
 
-  const input = document.getElementById("searchInput").value
-    .toLowerCase()
-    .trim();
+<body>
 
-  const results = document.getElementById("results");
+<h1>📖 O'zbek Lug'ati</h1>
 
-  results.innerHTML = "";
+<input
+id="searchInput"
+type="text"
+placeholder="So'z yozing..."
+autocomplete="off"
+/>
 
-  if (input === "") return;
+<div id="results"></div>
 
-  const filtered = words.filter(item =>
-    item.word.toLowerCase().includes(input)
-  );
+<script src="app.js"></script>
 
-
-  if (filtered.length === 0) {
-    results.innerHTML = "<p>So'z topilmadi</p>";
-    return;
-  }
-
-  filtered.forEach(item => {
-
-    const div = document.createElement("div");
-
-    div.className = "word-card";
-
-    div.innerHTML = `
-      <h3>${item.word}</h3>
-      <p><b>Ma'nosi:</b> ${item.meaning}</p>
-      <p><b>Sinonim:</b> ${item.synonym}</p>
-      <p><b>Antonim:</b> ${item.antonym}</p>
-    `;
-
-    results.appendChild(div);
-
-  });
-
-}
-
-
-// Harf yozilishi bilan qidirish
-document.getElementById("searchInput")
-.addEventListener("input", searchWord);
-
-</script>
+</body>
+</html>
