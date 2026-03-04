@@ -1,0 +1,70 @@
+<!DOCTYPE html><html lang="uz"><head>
+<meta charset="UTF-8">
+<title>Esse mavzulari</title><link rel="stylesheet" href="style.css"><style>
+
+.topic{
+background:#222;
+color:white;
+padding:12px;
+margin:10px;
+border-radius:8px;
+cursor:pointer;
+}
+
+textarea{
+width:90%;
+height:200px;
+margin-top:20px;
+padding:10px;
+font-size:16px;
+}
+
+button{
+padding:10px 20px;
+margin-top:10px;
+font-size:16px;
+}
+
+</style></head><body><h1>📝 Esse mavzulari</h1><div class="topic" onclick="selectTopic(this)">
+1. Hukumat yo'llar va avtomobil yo'llarini yaxshilashga ko'proq pul sarflashlari kerakmi yoki hukumat jamoat transportini yaxshilashga ko'proq pul sarflashlari kerakmi?
+</div><div class="topic" onclick="selectTopic(this)">
+2. Odamlar hayotini yanada zavqli qilish uchun ixtiyoriy xarajatlarini ko‘paytirib yuboradilar. Siz bu masalaga qanday yondashasiz?
+</div><div class="topic" onclick="selectTopic(this)">
+3. Televideniya orqali namoyish qilinadigan mahsulot reklamalariga ba'zilar salbiy qaraydi, boshqalar esa kerakli deb hisoblaydi.
+</div><div class="topic" onclick="selectTopic(this)">
+4. Ko'pchilik plastik qadoqdagi suvni afzal ko'radi, ayrimlar vodoprovod suvi foydaliroq deydi.
+</div><div class="topic" onclick="selectTopic(this)">
+5. Intizom maktab muammosimi yoki ota-ona mas'uliyatimi?
+</div><div class="topic" onclick="selectTopic(this)">
+6. Kompyuter tarjimalari sabab til o‘rganish kerak emas degan fikrga qo‘shilasizmi?
+</div><div class="topic" onclick="selectTopic(this)">
+7. Oliy taʼlim faqat ish topish uchunmi yoki boshqa foydasi ham bormi?
+</div><div class="topic" onclick="selectTopic(this)">
+8. Reklamalar jamiyat uchun foydalimi yoki zararli?
+</div><div class="topic" onclick="selectTopic(this)">
+9. Tarixni haqqoniy yozish va davr nuqtayi nazaridan yozish o‘rtasidagi farq.
+</div><div class="topic" onclick="selectTopic(this)">
+10. Chet elda ishlayotganlar iqtisodiyotga foyda keltiradimi?
+</div><div class="topic" onclick="selectTopic(this)">
+11. Alifbo islohoti haqidagi turli fikrlar.
+</div><h2 id="selectedTopic"></h2><textarea id="essayText" placeholder="Esse yozing..."></textarea><br><button onclick="saveEssay()">Saqlash</button>
+
+<p id="msg"></p><script>
+
+function selectTopic(el){
+
+document.getElementById("selectedTopic").innerText = el.innerText
+
+}
+
+function saveEssay(){
+
+let text=document.getElementById("essayText").value
+
+localStorage.setItem("essay",text)
+
+document.getElementById("msg").innerText="✅ Esse saqlandi"
+
+}
+
+</script></body></html>
