@@ -1,0 +1,285 @@
+[
+{
+"question":"Sinonim so‘zlar qaysi javobda berilgan?",
+"a":"katta – ulkan",
+"b":"katta – kichik",
+"c":"katta – uzun",
+"correct":"a"
+},
+{
+"question":"Antonim so‘zlar qaysi qatorda berilgan?",
+"a":"yaxshi – a’lo",
+"b":"katta – kichik",
+"c":"tez – chaqqon",
+"correct":"b"
+},
+{
+"question":"Qaysi so‘z ko‘chma ma’noda ishlatilgan?",
+"a":"oltin soat",
+"b":"oltin kuz",
+"c":"oltin uzuk",
+"correct":"b"
+},
+{
+"question":"Qaysi gapda sifat mavjud?",
+"a":"U kitob o‘qidi",
+"b":"Chiroyli gul ochildi",
+"c":"Men bordim",
+"correct":"b"
+},
+{
+"question":"Qaysi so‘z fe’l hisoblanadi?",
+"a":"o‘qimoq",
+"b":"kitob",
+"c":"chiroyli",
+"correct":"a"
+},
+{
+"question":"Ot so‘z turkumiga qaysi so‘z kiradi?",
+"a":"tez",
+"b":"yugurmoq",
+"c":"maktab",
+"correct":"c"
+},
+{
+"question":"Qaysi gapda ravish bor?",
+"a":"U tez yugurdi",
+"b":"U kitob o‘qidi",
+"c":"U maktabga bordi",
+"correct":"a"
+},
+{
+"question":"Qaysi so‘z sifat turkumiga kiradi?",
+"a":"baland",
+"b":"yugurmoq",
+"c":"tez",
+"correct":"a"
+},
+{
+"question":"Qaysi so‘z olmosh hisoblanadi?",
+"a":"biz",
+"b":"maktab",
+"c":"yaxshi",
+"correct":"a"
+},
+{
+"question":"Qaysi gapda ega mavjud?",
+"a":"Men kitob o‘qidim",
+"b":"Kitob o‘qildi",
+"c":"O‘qildi",
+"correct":"a"
+},
+
+{
+"question":"Qaysi qo‘shimcha ko‘plik qo‘shimchasi?",
+"a":"-lar",
+"b":"-ni",
+"c":"-dan",
+"correct":"a"
+},
+{
+"question":"Qaysi so‘z yasama so‘z?",
+"a":"kitob",
+"b":"kitobchi",
+"c":"uy",
+"correct":"b"
+},
+{
+"question":"Qaysi gapda kesim fe’l bilan ifodalangan?",
+"a":"U o‘qituvchi",
+"b":"U kitob o‘qidi",
+"c":"Bugun sovuq",
+"correct":"b"
+},
+{
+"question":"Qaysi so‘z tub so‘z?",
+"a":"o‘qituvchi",
+"b":"kitob",
+"c":"kitobxon",
+"correct":"b"
+},
+{
+"question":"Qaysi qo‘shimcha egalik qo‘shimchasi?",
+"a":"-im",
+"b":"-dan",
+"c":"-ga",
+"correct":"a"
+},
+{
+"question":"Qaysi gapda so‘roq ma’nosi bor?",
+"a":"Sen qayerga borasan?",
+"b":"Men maktabga bordim",
+"c":"Bugun dars bor",
+"correct":"a"
+},
+{
+"question":"Qaysi gap buyruq gap?",
+"a":"Kitobni o‘qi!",
+"b":"Men kitob o‘qidim",
+"c":"Bugun dars bor",
+"correct":"a"
+},
+{
+"question":"Qaysi gap undov gap?",
+"a":"Voy, naqadar chiroyli!",
+"b":"U maktabga bordi",
+"c":"Men kitob o‘qidim",
+"correct":"a"
+},
+{
+"question":"Qaysi gap darak gap?",
+"a":"U maktabga bordi",
+"b":"Sen qayerga borasan?",
+"c":"Voy!",
+"correct":"a"
+},
+{
+"question":"Qaysi so‘z ravish?",
+"a":"tez",
+"b":"tezlik",
+"c":"tezkor",
+"correct":"a"
+},
+
+{
+"question":"Qaysi so‘z ot yasovchi qo‘shimcha bilan yasalgan?",
+"a":"ishchi",
+"b":"ish",
+"c":"ishla",
+"correct":"a"
+},
+{
+"question":"Qaysi gap sodda gap?",
+"a":"Men kitob o‘qidim",
+"b":"Men kitob o‘qidim va dam oldim",
+"c":"Agar vaqt bo‘lsa kelaman",
+"correct":"a"
+},
+{
+"question":"Qaysi gap qo‘shma gap?",
+"a":"Men bordim va u keldi",
+"b":"Men bordim",
+"c":"Bugun sovuq",
+"correct":"a"
+},
+{
+"question":"Qaysi gapda sifatlovchi aniqlovchi bor?",
+"a":"Chiroyli gul ochildi",
+"b":"Men maktabga bordim",
+"c":"U yugurdi",
+"correct":"a"
+},
+{
+"question":"Qaysi gapda to‘ldiruvchi mavjud?",
+"a":"Men kitob o‘qidim",
+"b":"Men bordim",
+"c":"Bugun sovuq",
+"correct":"a"
+},
+{
+"question":"Qaysi so‘z ko‘chma ma’noda ishlatilgan?",
+"a":"temir eshik",
+"b":"temir iroda",
+"c":"temir mix",
+"correct":"b"
+},
+{
+"question":"Qaysi so‘z antonim juftlik hosil qiladi?",
+"a":"katta – kichik",
+"b":"katta – ulkan",
+"c":"katta – keng",
+"correct":"a"
+},
+{
+"question":"Qaysi so‘z sinonim juftlik hosil qiladi?",
+"a":"yaxshi – a’lo",
+"b":"yaxshi – yomon",
+"c":"yaxshi – kichik",
+"correct":"a"
+},
+{
+"question":"Qaysi gapda ravish ishlatilgan?",
+"a":"U sekin yurdi",
+"b":"U kitob o‘qidi",
+"c":"U maktabga bordi",
+"correct":"a"
+},
+{
+"question":"Qaysi so‘z fe’l yasovchi qo‘shimcha bilan yasalgan?",
+"a":"ishla",
+"b":"ishchi",
+"c":"ish",
+"correct":"a"
+},
+
+{
+"question":"Qaysi gapda ega yashirin?",
+"a":"Keldim",
+"b":"Men keldim",
+"c":"U keldi",
+"correct":"a"
+},
+{
+"question":"Qaysi gapda sifat bor?",
+"a":"Baland tog‘lar ko‘rindi",
+"b":"Men bordim",
+"c":"U yugurdi",
+"correct":"a"
+},
+{
+"question":"Qaysi so‘z ravishdosh?",
+"a":"kelib",
+"b":"kelmoq",
+"c":"kelgan",
+"correct":"a"
+},
+{
+"question":"Qaysi so‘z sifatdosh?",
+"a":"kelgan",
+"b":"kelib",
+"c":"kelmoq",
+"correct":"a"
+},
+{
+"question":"Qaysi qo‘shimcha kelishik qo‘shimchasi?",
+"a":"-ni",
+"b":"-lar",
+"c":"-im",
+"correct":"a"
+},
+{
+"question":"Qaysi gapda aniqlovchi mavjud?",
+"a":"Yashil daraxt o‘sdi",
+"b":"Men bordim",
+"c":"U yugurdi",
+"correct":"a"
+},
+{
+"question":"Qaysi gapda kesim ot bilan ifodalangan?",
+"a":"U o‘qituvchi",
+"b":"U o‘qidi",
+"c":"U keldi",
+"correct":"a"
+},
+{
+"question":"Qaysi so‘z olmosh hisoblanadi?",
+"a":"u",
+"b":"kitob",
+"c":"yaxshi",
+"correct":"a"
+},
+{
+"question":"Qaysi gap undov gap?",
+"a":"Voy, naqadar go‘zal!",
+"b":"Men bordim",
+"c":"U keldi",
+"correct":"a"
+},
+{
+"question":"Qaysi gap so‘roq gap?",
+"a":"Sen qayerga borasan?",
+"b":"Men bordim",
+"c":"Bugun sovuq",
+"correct":"a"
+}
+]
