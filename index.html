@@ -48,7 +48,7 @@ box-shadow:0 0 10px rgba(0,0,0,0.1);
 
 <h1>📖 O‘zbek Lug‘ati</h1>
 
-<input id="searchInput" placeholder="So‘z kiriting...">
+<input id="searchInput" placeholder="So‘z kiriting..." oninput="searchWord()">
 
 <br>
 
@@ -1654,24 +1654,28 @@ const input = document
 .value
 .toLowerCase();
 
-const result = words.find(w =>
-w.word.toLowerCase() === input
-);
-
 const resultBox = document.getElementById("result");
 
-if(result){
+if(input === ""){
+resultBox.innerHTML="";
+return;
+}
 
-resultBox.innerHTML = `
-<h2>${result.word}</h2>
-<p><b>Ma'nosi:</b> ${result.meaning}</p>
-<p><b>Sinonim:</b> ${result.synonym}</p>
-<p><b>Antonim:</b> ${result.antonym}</p>
+const results = words.filter(w =>
+w.word.toLowerCase().startsWith(input)
+);
+
+let html="";
+
+results.slice(0,10).forEach(w=>{
+html += `
+<p><b>${w.word}</b></p>
 `;
+});
 
-}else{
+resultBox.innerHTML = html;
 
-resultBox.innerHTML = "❌ So‘z topilmadi";
+}= "❌ So‘z topilmadi";
 
 }
 
