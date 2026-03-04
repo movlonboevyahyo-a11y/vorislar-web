@@ -1,58 +1,27 @@
-// words.json dan so'zlarni yuklaymiz
-let words = [];
+let words=[]
 
 fetch("words.json")
-  .then(response => response.json())
-  .then(data => {
-    words = data;
-  });
+.then(res=>res.json())
+.then(data=>{
+words=data
+})
 
+document.getElementById("searchInput").addEventListener("input",function(){
 
-// qidiruv funksiyasi
-function searchWord() {
+let input=this.value.toLowerCase()
 
-  const input = document
-    .getElementById("searchInput")
-    .value
-    .toLowerCase()
-    .trim();
+let results=document.getElementById("results")
 
-  const resultBox = document.getElementById("results");
+results.innerHTML=""
 
-  resultBox.innerHTML = "";
+let filtered=words.filter(w=>w.word.toLowerCase().includes(input))
 
-  if (input === "") return;
+filtered.forEach(w=>{
 
-  const filtered = words.filter(item =>
-    item.word.toLowerCase().includes(input)
-  );
+results.innerHTML+=`
 
-  if (filtered.length === 0) {
-    resultBox.innerHTML = "<p>❌ So'z topilmadi</p>";
-    return;
-  }
+<div><h3>${w.word}</h3><p>${w.meaning}</p></div>`
 
-  filtered.forEach(item => {
+})
 
-    const div = document.createElement("div");
-
-    div.className = "word-card";
-
-    div.innerHTML = `
-      <h3>${item.word}</h3>
-      <p><b>Ma'nosi:</b> ${item.meaning}</p>
-      <p><b>Sinonim:</b> ${item.synonym}</p>
-      <p><b>Antonim:</b> ${item.antonym}</p>
-    `;
-
-    resultBox.appendChild(div);
-
-  });
-
-}
-
-
-// yozish bilan qidirish
-document
-.getElementById("searchInput")
-.addEventListener("input", searchWord);
+})
