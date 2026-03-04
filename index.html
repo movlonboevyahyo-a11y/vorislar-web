@@ -1,54 +1,74 @@
 <!DOCTYPE html>
 <html lang="uz">
 <head>
+
 <meta charset="UTF-8">
-<title>Lug‘at qidiruvi</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>O'zbek Lug'ati</title>
+
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
 
 <style>
+
 body{
-font-family: Arial;
-background:#f4f4f4;
+font-family:Arial;
+background:#0f172a;
+color:white;
+padding:20px;
 text-align:center;
-padding:30px;
 }
 
 h1{
-color:#333;
+margin-bottom:25px;
 }
 
 input{
-width:80%;
-padding:12px;
+width:90%;
+padding:14px;
 font-size:16px;
-border-radius:8px;
-border:1px solid #ccc;
+border-radius:10px;
+border:none;
+margin-bottom:15px;
 }
 
 button{
-padding:12px 20px;
-font-size:16px;
+padding:12px 25px;
 border:none;
-background:#0088cc;
+border-radius:10px;
+background:#2563eb;
 color:white;
-border-radius:8px;
-margin-top:10px;
+font-size:16px;
+cursor:pointer;
 }
 
 .result{
-margin-top:25px;
-background:white;
-padding:20px;
+margin-top:20px;
+background:#1e293b;
+padding:15px;
 border-radius:10px;
-box-shadow:0 0 10px rgba(0,0,0,0.1);
+text-align:left;
 }
+
+.word{
+margin-bottom:15px;
+padding-bottom:10px;
+border-bottom:1px solid #334155;
+}
+
 </style>
 
 </head>
+
 <body>
 
-<h1>📖 O‘zbek Lug‘ati</h1>
+<h1>📖 O'zbek Lug'ati</h1>
 
-<input id="searchInput" placeholder="So‘z kiriting..." oninput="searchWord()">
+<input
+id="searchInput"
+placeholder="So'z yozing..."
+oninput="searchWord()"
+>
 
 <br>
 
@@ -58,11 +78,16 @@ box-shadow:0 0 10px rgba(0,0,0,0.1);
 
 <script>
 
+const tg = window.Telegram.WebApp;
+tg.expand();
+
 const words = [
 
-{ word:"Intilish", meaning:"Maqsad sari harakat qilish", synonym:"Harakat", antonym:"Loqaydlik" },
-{ word:"Ma’rifat", meaning:"Bilim orqali haqiqatni anglash", synonym:"Ilm", antonym:"Jaholat" },
-{ word:"Ziyo", meaning:"Ma’naviy yorug‘lik", synonym:"Nur", antonym:"Zulmat" },
+{word:"Intilish",meaning:"Maqsad sari harakat qilish",synonym:"Harakat",antonym:"Loqaydlik"},
+{word:"Ma'rifat",meaning:"Bilim orqali haqiqatni anglash",synonym:"Ilm",antonym:"Jaholat"},
+{word:"Ziyo",meaning:"Ma'naviy yorug'lik",synonym:"Nur",antonym:"Zulmat"},
+{word:"Anor",meaning:"Qizil donali shirin meva",synonym:"—",antonym:"—"},
+{word:"Anovi",meaning:"Narigi tomondagi narsa yoki shaxs",synonym:"U",antonym:"Bu"}
 {
 word: "Anonim",
 meaning: "Muallifi noma’lum bo‘lgan asar yoki xat",
@@ -314,13 +339,8 @@ meaning: "Narigi tomondagi shaxs yoki narsa",
 synonym: "U tomondagi",
 antonym: "Bunov"
 },
-  {
-word: "Anovi",
-meaning: "Narigi tomondagi narsa yoki shaxs",
-synonym: "U",
-antonym: "Bu"
-},
-  {
+
+{
 word: "Beva",
 meaning: "Eri yoki xotini vafot etgan va qayta turmush qurmagan shaxs",
 synonym: "Tul",
@@ -522,7 +542,8 @@ meaning: "Baxtsiz",
 synonym: "Baxtsiz",
 antonym: "Baxtli"
 },
-  {
+
+{
 word: "Bezillamoq",
 meaning: "Yuragi hadikka tushmoq yoki zirqirab og‘rimoq",
 synonym: "Zirqiramoq",
@@ -647,7 +668,8 @@ meaning: "Bezab chiroyli qilmoq",
 synonym: "Bezamoq",
 antonym: "Xunuklashtirmoq"
 },
-  {
+
+{
 word: "Buloqi",
 meaning: "Burunni teshib taqiladigan zirak, ziinat buyumi",
 synonym: "Burun ziragi",
@@ -779,7 +801,8 @@ meaning: "Sayroqi qush; ko‘chma — hushovoz xonanda",
 synonym: "Sayroqi qush",
 antonym: "—"
 },
-  {
+
+{
 word: "Buyruqboz",
 meaning: "Buyruq berishni yoqtiradigan, doimo buyruq ohangida gapiradigan odam",
 synonym: "Amrparast",
@@ -911,7 +934,8 @@ meaning: "To‘liq, kamchiliksiz, yetarli",
 synonym: "Bekamu-ko‘st",
 antonym: "Kam"
 },
-  {
+
+{
 word: "Buromad",
 meaning: "Chiqim, sarf-xarajat",
 synonym: "Chiqim",
@@ -1071,7 +1095,8 @@ meaning: "Bo‘g‘zi tor shisha idish",
 synonym: "Shisha idish",
 antonym: "—"
 },
-  {
+
+{
 word: "Bug‘doy",
 meaning: "G‘alladoshlar oilasiga mansub o‘simlik va uning doni",
 synonym: "G‘alla",
@@ -1210,7 +1235,8 @@ meaning: "Suyak segmenti yoki bo‘linma",
 synonym: "Segment",
 antonym: "—"
 },
-  {
+
+{
 word: "Bo‘yashmoq",
 meaning: "Birgalikda bo‘yamoq yoki bo‘yash ishiga yordam bermoq",
 synonym: "Ranglamoq",
@@ -1363,7 +1389,8 @@ meaning: "Ko‘p va bema’ni gapirish odati",
 synonym: "Gapbozlik",
 antonym: "Jiddiylik"
 },
-  {
+
+{
 word: "Vakansiya",
 meaning: "Bo‘sh, egallanmagan lavozim",
 synonym: "Bo‘sh o‘rin",
@@ -1502,7 +1529,8 @@ meaning: "Bosimi juda past bo‘lgan gaz holati, bo‘shliq",
 synonym: "Bo‘shliq",
 antonym: "Atmosfera bosimi"
 },
-  {
+
+{
 word: "Vanilin",
 meaning: "Vanil hidiga ega bo‘lgan sun’iy kristall modda",
 synonym: "Vanil ekstrakti",
@@ -1643,9 +1671,8 @@ antonym: "Abadiylik"
 }
 
 
-// SEN YOZGAN 6000 TA SO‘Z SHU YERGA QO‘YILADI
-
 ];
+
 function searchWord(){
 
 const input = document
@@ -1666,24 +1693,30 @@ w.word.toLowerCase().includes(input)
 );
 
 if(results.length === 0){
-resultBox.innerHTML = "❌ So‘z topilmadi";
+resultBox.innerHTML="❌ So'z topilmadi";
 return;
 }
 
 let html="";
 
 results.slice(0,10).forEach(w=>{
+
 html += `
-<p>
+<div class="word">
 <b>${w.word}</b><br>
 Ma'nosi: ${w.meaning}<br>
 Sinonim: ${w.synonym}<br>
 Antonim: ${w.antonym}
-</p>
-<hr>
+</div>
 `;
+
 });
 
 resultBox.innerHTML = html;
 
 }
+
+</script>
+
+</body>
+</html>
