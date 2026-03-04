@@ -1646,7 +1646,6 @@ antonym: "Abadiylik"
 // SEN YOZGAN 6000 TA SO‘Z SHU YERGA QO‘YILADI
 
 ];
-
 function searchWord(){
 
 const input = document
@@ -1675,7 +1674,13 @@ let html="";
 
 results.slice(0,10).forEach(w=>{
 html += `
-<p><b>${w.word}</b></p>
+<p>
+<b>${w.word}</b><br>
+Ma'nosi: ${w.meaning}<br>
+Sinonim: ${w.synonym}<br>
+Antonim: ${w.antonym}
+</p>
+<hr>
 `;
 });
 
