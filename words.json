@@ -1,0 +1,1268 @@
+[
+{
+"word": "Anonim",
+"meaning": "Muallifi noma’lum bo‘lgan asar yoki xat",
+"synonym": "Nomsiz",
+"antonym": "Muallifli"
+},
+{
+"word": "Anonimka",
+"meaning": "Muallifi ko‘rsatilmagan xat",
+"synonym": "Yashirin xat",
+"antonym": "Ochiq xat"
+},
+{
+"word": "Anonimchi",
+"meaning": "Anonim xat yozuvchi shaxs",
+"synonym": "Yashirin yozuvchi",
+"antonym": "Ochiq muallif"
+},
+{
+"word": "Anons",
+"meaning": "Oldindan beriladigan e’lon",
+"synonym": "E’lon",
+"antonym": "Yakun xabari"
+},
+{
+"word": "Anor",
+"meaning": "Qizil donali shirin meva",
+"synonym": "—",
+"antonym": "—"
+},
+{
+"word": "Anorganik",
+"meaning": "Noorganik, tirik organizmga bog‘liq bo‘lmagan",
+"synonym": "Noorganik",
+"antonym": "Organik"
+},
+{
+"word": "Antagonizm",
+"meaning": "Kelishtirib bo‘lmaydigan qarama-qarshilik",
+"synonym": "Ziddiyat",
+"antonym": "Hamjihatlik"
+},
+{
+"word": "Antagonist",
+"meaning": "Qarama-qarshi tomon yoki dushman",
+"synonym": "Raqib",
+"antonym": "Ittifoqchi"
+},
+{
+"word": "Antagonistik",
+"meaning": "O‘zaro keskin qarama-qarshi",
+"synonym": "Zid",
+"antonym": "Mos"
+},
+{
+"word": "Antarktida",
+"meaning": "Janubiy qutb hududidagi materik",
+"synonym": "Janubiy qutb materigi",
+"antonym": "Arktika"
+},
+{
+"word": "Antarktika",
+"meaning": "Janubiy qutb hududi va unga tutash orollar",
+"synonym": "Janubiy qutb hududi",
+"antonym": "Arktika"
+},
+{
+"word": "Antenna",
+"meaning": "Signal uzatuvchi yoki qabul qiluvchi qurilma",
+"synonym": "Qabul qilgich",
+"antonym": "—"
+},
+{
+"word": "Antibiotik",
+"meaning": "Mikroblarni yo‘q qiluvchi modda",
+"synonym": "Dori",
+"antonym": "—"
+},
+{
+"word": "Antigen",
+"meaning": "Organizmda immun javob chaqiruvchi modda",
+"synonym": "Begona modda",
+"antonym": "—"
+},
+{
+"word": "Antik",
+"meaning": "Qadimgi davrga oid",
+"synonym": "Qadimiy",
+"antonym": "Zamonaviy"
+},
+{
+"word": "Antinomiya",
+"meaning": "O‘zaro zid ikki hukm",
+"synonym": "Ziddiyat",
+"antonym": "Moslik"
+},
+{
+"word": "Antipatiya",
+"meaning": "Yoqtirmaslik hissi",
+"synonym": "Nafrat",
+"antonym": "Simpatya"
+},
+{
+"word": "Antisemitizm",
+"meaning": "Yahudiylarga nisbatan dushmanlik g‘oyasi",
+"synonym": "Irqchilik",
+"antonym": "Bag‘rikenglik"
+},
+{
+"word": "Antitana",
+"meaning": "Organizmda antigenlarga qarshi hosil bo‘ladigan modda",
+"synonym": "Antitelo",
+"antonym": "—"
+},
+{
+"word": "Antiteza",
+"meaning": "Qarama-qarshi fikr yoki tushuncha",
+"synonym": "Zid fikr",
+"antonym": "Mos fikr"
+},
+{
+"word": "Antitezis",
+"meaning": "Tezisga qarshi qo‘yilgan fikr",
+"synonym": "Qarama-qarshi fikr",
+"antonym": "Tezis"
+},
+{
+"word": "Antifriz",
+"meaning": "Past haroratda muzlamaydigan suyuqlik",
+"synonym": "Sovitish suyuqligi",
+"antonym": "—"
+},
+{
+"word": "Antifashist",
+"meaning": "Fashizmga qarshi kurashuvchi shaxs",
+"synonym": "Qarshilik tarafdori",
+"antonym": "Fashist"
+},
+{
+"word": "Antitsiklon",
+"meaning": "Yuqori bosimli atmosfera girdobi",
+"synonym": "Yuqori bosim hududi",
+"antonym": "Tsiklon"
+},
+{
+"word": "Antologiya",
+"meaning": "Tanlab tuzilgan asarlar to‘plami",
+"synonym": "To‘plam",
+"antonym": "—"
+},
+{
+"word": "Antonim",
+"meaning": "Ma’nosi qarama-qarshi so‘z",
+"synonym": "Zid so‘z",
+"antonym": "Sinonim"
+},
+{
+"word": "Antonimiya",
+"meaning": "Qarama-qarshi ma’nolilik hodisasi",
+"synonym": "Zidlik",
+"antonym": "Sinonimiya"
+},
+{
+"word": "Antrakt",
+"meaning": "Spektakl pardalari orasidagi tanaffus",
+"synonym": "Tanaffus",
+"antonym": "Davom"
+},
+{
+"word": "Antratsit",
+"meaning": "Qattiq va sifatli ko‘mir turi",
+"synonym": "Ko‘mir",
+"antonym": "—"
+},
+{
+"word": "Antropo-",
+"meaning": "Odamga oid ma’noni bildiruvchi qo‘shimcha",
+"synonym": "Insoniy",
+"antonym": "—"
+},
+{
+"word": "Anker",
+"meaning": "Soat mexanizmining asosiy qismi yoki metall mahkamlovchi detal",
+"synonym": "Mahkamlovchi",
+"antonym": "—"
+},
+{
+"word": "Anketa",
+"meaning": "Ma’lumot to‘plash uchun savollar varaqasi",
+"synonym": "So‘rovnoma",
+"antonym": "—"
+},
+{
+"word": "Anneksiya",
+"meaning": "Bir davlat hududini majburan qo‘shib olish",
+"synonym": "Bosib olish",
+"antonym": "Mustaqillik berish"
+},
+{
+"word": "Annotatsiya",
+"meaning": "Asar mazmuni haqida qisqacha izoh",
+"synonym": "Izoh",
+"antonym": "To‘liq matn"
+},
+{
+"word": "Annulyatsiya",
+"meaning": "Bekor qilish, haqiqiy emas deb topish",
+"synonym": "Bekor qilish",
+"antonym": "Tasdiqlash"
+},
+{
+"word": "Anov",
+"meaning": "Narigi tomondagi shaxs yoki narsa",
+"synonym": "U tomondagi",
+"antonym": "Bunov"
+},
+{
+"word": "Beva",
+"meaning": "Eri yoki xotini vafot etgan va qayta turmush qurmagan shaxs",
+"synonym": "Tul",
+"antonym": "Turmushli"
+},
+{
+"word": "Beva-bechora",
+"meaning": "Qarovchisiz, nochor va yordamga muhtoj kishilar",
+"synonym": "Nokas",
+"antonym": "Badavlat"
+},
+{
+"word": "Bevaj",
+"meaning": "Sababsiz, asossiz",
+"synonym": "Sababsiz",
+"antonym": "Asosli"
+},
+{
+"word": "Bevalik",
+"meaning": "Er yoki xotinsiz yashash holati",
+"synonym": "Yolg‘izlik",
+"antonym": "Oilalilik"
+},
+{
+"word": "Bevasiqa",
+"meaning": "Hujjatsiz yoki ishonchsiz",
+"synonym": "Vasiqasiz",
+"antonym": "Hujjatli"
+},
+{
+"word": "Bevatan",
+"meaning": "Vatansiz yoki o‘z yurtidan ajralgan",
+"synonym": "Darbadar",
+"antonym": "Vatanli"
+},
+{
+"word": "Bevafo",
+"meaning": "Va’dasida turmaydigan, sadoqatsiz",
+"synonym": "Sadoqatsiz",
+"antonym": "Vafodor"
+},
+{
+"word": "Bevafolik",
+"meaning": "Va’daga xilof ish tutish",
+"synonym": "Xiyonat",
+"antonym": "Sadoqat"
+},
+{
+"word": "Bevaqt",
+"meaning": "Vaqtidan oldin yoki nomunosib paytda",
+"synonym": "Bemavrid",
+"antonym": "O‘z vaqtida"
+},
+{
+"word": "Bevosita",
+"meaning": "Oraliq vositasiz, to‘g‘ridan-to‘g‘ri",
+"synonym": "To‘g‘ridan-to‘g‘ri",
+"antonym": "Bilvosita"
+},
+{
+"word": "Begemot",
+"meaning": "Afrikada yashaydigan yirik suv hayvoni",
+"synonym": "Suv oti",
+"antonym": "—"
+},
+{
+"word": "Bedarak",
+"meaning": "Darak yo‘q, yo‘qolgan",
+"synonym": "Yo‘qolgan",
+"antonym": "Topilgan"
+},
+{
+"word": "Bedarvoza",
+"meaning": "Darvozasi yo‘q yoki nazoratsiz",
+"synonym": "Nazoratsiz",
+"antonym": "Qo‘riqlangan"
+},
+{
+"word": "Bedard",
+"meaning": "G‘amsiz, loqayd",
+"synonym": "Beparvo",
+"antonym": "Dardli"
+},
+{
+"word": "Bedarmon",
+"meaning": "Hol-siz, quvvatsiz",
+"synonym": "Zayif",
+"antonym": "Baquvvat"
+},
+{
+"word": "Bedarmonlik",
+"meaning": "Hol-sizlik holati",
+"synonym": "Majolsizlik",
+"antonym": "Baquvvatlik"
+},
+{
+"word": "Bedaxona",
+"meaning": "Beda yoki xashak saqlanadigan joy",
+"synonym": "Ombor",
+"antonym": "—"
+},
+{
+"word": "Bedil",
+"meaning": "G‘amgin yoki oshiqona holatdagi shaxs",
+"synonym": "Mungli",
+"antonym": "Xursand"
+},
+{
+"word": "Bedin",
+"meaning": "Dinsiz",
+"synonym": "Dinsiz",
+"antonym": "Dindor"
+},
+{
+"word": "Bedod",
+"meaning": "Zulm, adolatsizlik",
+"synonym": "Zulm",
+"antonym": "Adolat"
+},
+{
+"word": "Bedodlik",
+"meaning": "Adolatsizlik hukm surgan holat",
+"synonym": "Zulmlik",
+"antonym": "Adolatlilik"
+},
+{
+"word": "Beaso",
+"meaning": "Tayanchsiz, suyanadigan narsasi yo‘q",
+"synonym": "Tayanchsiz",
+"antonym": "Suyanchoqli"
+},
+{
+"word": "Beaxloq",
+"meaning": "Axloqsiz, odobsiz",
+"synonym": "Odobsiz",
+"antonym": "Axloqli"
+},
+{
+"word": "Beaql",
+"meaning": "Aqli yetarli emas, nodon",
+"synonym": "Nodon",
+"antonym": "Aqlli"
+},
+{
+"word": "Bebaraka",
+"meaning": "Barakasi yo‘q, unumsiz",
+"synonym": "Unumsiz",
+"antonym": "Barakali"
+},
+{
+"word": "Bebaqo",
+"meaning": "Abadiy emas, o‘tkinchi",
+"synonym": "O‘tkinchi",
+"antonym": "Boqiy"
+},
+{
+"word": "Bebaho",
+"meaning": "Juda qimmatli, baholab bo‘lmaydigan",
+"synonym": "Qimmatli",
+"antonym": "Arzon"
+},
+{
+"word": "Bebahra",
+"meaning": "Foydadan mahrum",
+"synonym": "Bahrasiz",
+"antonym": "Bahramand"
+},
+{
+"word": "Bebaxt",
+"meaning": "Baxtsiz",
+"synonym": "Baxtsiz",
+"antonym": "Baxtli"
+},
+{
+"word": "Bezillamoq",
+"meaning": "Yuragi hadikka tushmoq yoki zirqirab og‘rimoq",
+"synonym": "Zirqiramoq",
+"antonym": "Tinchlanmoq"
+},
+{
+"word": "Bezmoq",
+"meaning": "Joniga tegmoq, zerikmoq",
+"synonym": "Zerikmoq",
+"antonym": "Yoqtirmoq"
+},
+{
+"word": "Bezovta",
+"meaning": "Tinchligi buzilgan, betinch",
+"synonym": "Betoqat",
+"antonym": "Xotirjam"
+},
+{
+"word": "Bezovtalanmoq",
+"meaning": "Tashvishga tushmoq, xavotirlanmoq",
+"synonym": "Xavotirlanmoq",
+"antonym": "Tinchlanmoq"
+},
+{
+"word": "Bezovtalik",
+"meaning": "Tashvish, ichki bezovtalik holati",
+"synonym": "Xavotir",
+"antonym": "Xotirjamlik"
+},
+{
+"word": "Bezovchi",
+"meaning": "Go‘zal ko‘rsatadigan, bezab turadigan",
+"synonym": "Zeb beruvchi",
+"antonym": "Xunuklashtiruvchi"
+},
+{
+"word": "Bezor",
+"meaning": "Biror narsadan to‘ygan, zerikkan",
+"synonym": "Zerikkan",
+"antonym": "Qiziqqan"
+},
+{
+"word": "Bezanglamoq",
+"meaning": "Qo‘rqib yoki hadik bilan bezovta bo‘lmoq",
+"synonym": "Cho‘chimoq",
+"antonym": "Xotirjam turmoq"
+},
+{
+"word": "Bezanjir",
+"meaning": "Zanjirsiz, erkin",
+"synonym": "Erkin",
+"antonym": "Zanjirli"
+},
+{
+"word": "Bezanmoq",
+"meaning": "O‘ziga oro bermoq, bezak bilan chiroyli bo‘lmoq",
+"synonym": "O‘ranmoq",
+"antonym": "Soddalashmoq"
+},
+{
+"word": "Bezarar",
+"meaning": "Zarar yetkazmaydigan, xavfsiz",
+"synonym": "Xavfsiz",
+"antonym": "Zararli"
+},
+{
+"word": "Bezaxa",
+"meaning": "Lat yemagan, shikastlanmagan",
+"synonym": "Butun",
+"antonym": "Shikastlangan"
+},
+{
+"word": "Bezbet",
+"meaning": "Uyatsiz, andishasiz",
+"synonym": "Surbet",
+"antonym": "Hayo-li"
+},
+{
+"word": "Bezbetlik",
+"meaning": "Uyatsizlik, surbetlik holati",
+"synonym": "Uyatsizlik",
+"antonym": "Hayo"
+},
+{
+"word": "Bezgak",
+"meaning": "Isitma chiqaradigan yuqumli kasallik",
+"synonym": "Malyariya",
+"antonym": "Sog‘liq"
+},
+{
+"word": "Bezgakdori",
+"meaning": "Bezgakka qarshi qo‘llanadigan dori",
+"synonym": "Xinin",
+"antonym": "—"
+},
+{
+"word": "Bezgakpashsha",
+"meaning": "Bezgak tarqatuvchi hasharot",
+"synonym": "Anofeles",
+"antonym": "—"
+},
+{
+"word": "Bezagamoq",
+"meaning": "Bezab chiroyli qilmoq",
+"synonym": "Bezamoq",
+"antonym": "Xunuklashtirmoq"
+},
+{
+"word": "Buloqi",
+"meaning": "Burunni teshib taqiladigan zirak, ziinat buyumi",
+"synonym": "Burun ziragi",
+"antonym": "—"
+},
+{
+"word": "Buloqchilar",
+"meaning": "Buloq, ko‘l va ariq atrofida yashovchi qisqa umrli hasharot turi",
+"synonym": "Suv hasharoti",
+"antonym": "—"
+},
+{
+"word": "Buloqochun",
+"meaning": "Qadimiy turkiy urug‘ nomlaridan biri",
+"synonym": "Urug‘ nomi",
+"antonym": "—"
+},
+{
+"word": "Bultur",
+"meaning": "O‘tgan yili",
+"synonym": "O‘tgan yil",
+"antonym": "Bu yil"
+},
+{
+"word": "Bulturgi",
+"meaning": "O‘tgan yilgi",
+"synonym": "Avvalgi yilgi",
+"antonym": "Joriy yilgi"
+},
+{
+"word": "Bulut",
+"meaning": "Osmonni qoplagan quyuq suv bug‘lari",
+"synonym": "Qora bulut",
+"antonym": "Musaffo osmon"
+},
+{
+"word": "Bulutday",
+"meaning": "Bulutga o‘xshash juda katta narsa",
+"synonym": "Bulutsimon",
+"antonym": "—"
+},
+{
+"word": "Bulutlanmoq",
+"meaning": "Bulut bilan qoplanmoq",
+"synonym": "Qoraymoq",
+"antonym": "Ochilmoq"
+},
+{
+"word": "Bulutli",
+"meaning": "Bulut bosgan osmon",
+"synonym": "Qorong‘i",
+"antonym": "Quyoshli"
+},
+{
+"word": "Bulvar",
+"meaning": "Ko‘cha o‘rtasidagi keng xiyobon",
+"synonym": "Xiyobon",
+"antonym": "Tor ko‘cha"
+},
+{
+"word": "Buksir",
+"meaning": "Boshqa kemani sudrab boruvchi kema",
+"synonym": "Tortuvchi kema",
+"antonym": "—"
+},
+{
+"word": "Bukun",
+"meaning": "Bugun (eski shakl)",
+"synonym": "Bugun",
+"antonym": "Kecha"
+},
+{
+"word": "Bukungi",
+"meaning": "Bugungi (eski shakl)",
+"synonym": "Hozirgi",
+"antonym": "Kechagi"
+},
+{
+"word": "Bukur",
+"meaning": "Umurtqa qiyshayishi natijasida hosil bo‘lgan do‘mboq",
+"synonym": "Bukri",
+"antonym": "Tik"
+},
+{
+"word": "Bukchaymoq",
+"meaning": "Yelkani chiqarib egilib qolmoq",
+"synonym": "Engashmoq",
+"antonym": "Tiklanmoq"
+},
+{
+"word": "Bul",
+"meaning": "Bu (eski shakl)",
+"synonym": "Bu",
+"antonym": "U"
+},
+{
+"word": "Bulamiq",
+"meaning": "Un va sutdan tayyorlanadigan ovqat",
+"synonym": "Atala",
+"antonym": "—"
+},
+{
+"word": "Bulamoq",
+"meaning": "Biror narsaga botirib qoplamoq",
+"synonym": "Botirmoq",
+"antonym": "Tozalamoq"
+},
+{
+"word": "Bulbul",
+"meaning": "Sayroqi qush",
+"synonym": "Sayroqi qush",
+"antonym": "—"
+},
+{
+"word": "Buyruqboz",
+"meaning": "Doimo buyruq berishni yoqtiradigan odam",
+"synonym": "Amrparast",
+"antonym": "Kamtar"
+},
+{
+"word": "Buyruqbozlik",
+"meaning": "Hamma ishni buyruq bilan boshqarish odati",
+"synonym": "Amrbozlik",
+"antonym": "Hamkorlik"
+},
+{
+"word": "Buyruqnamo",
+"meaning": "Buyruq ohangida aytilgan",
+"synonym": "Buyruqohang",
+"antonym": "Iltimoskor"
+},
+{
+"word": "Buyruqnoma",
+"meaning": "Buyruq yozilgan rasmiy hujjat",
+"synonym": "Farmon",
+"antonym": "Iltimosnoma"
+},
+{
+"word": "Buyruqomuz",
+"meaning": "Buyruq tarzida aytilgan",
+"synonym": "Qattiqohang",
+"antonym": "Muloyim"
+},
+{
+"word": "Buket",
+"meaning": "Dastalangan gullar to‘plami",
+"synonym": "Guldasta",
+"antonym": "—"
+},
+{
+"word": "Buketlamoq",
+"meaning": "Bir necha narsani to‘plam qilib yig‘moq",
+"synonym": "To‘plamoq",
+"antonym": "Sochmoq"
+},
+{
+"word": "Bukik",
+"meaning": "Buklangan yoki egilgan holat",
+"synonym": "Egilgan",
+"antonym": "Tik"
+},
+{
+"word": "Bukilma",
+"meaning": "Bukilgan joy",
+"synonym": "Egilma",
+"antonym": "Tekis"
+},
+{
+"word": "Bukilmas",
+"meaning": "Hech qachon egilmaydigan",
+"synonym": "Mustahkam",
+"antonym": "Bo‘sh"
+},
+{
+"word": "Bukilmoq",
+"meaning": "Egilmoq yoki buk holga kelmoq",
+"synonym": "Egilmoq",
+"antonym": "Tiklanmoq"
+},
+{
+"word": "Bukiluvchan",
+"meaning": "Oson egiladigan",
+"synonym": "Elastik",
+"antonym": "Qattiq"
+},
+{
+"word": "Buklam",
+"meaning": "Buklangan qism",
+"synonym": "Qat",
+"antonym": "Yoyiq"
+},
+{
+"word": "Buklama",
+"meaning": "Buklab yig‘iladigan narsa",
+"synonym": "Yig‘ma",
+"antonym": "—"
+},
+{
+"word": "Burg‘i",
+"meaning": "Teshish uchun ishlatiladigan asbob",
+"synonym": "Parma",
+"antonym": "—"
+},
+{
+"word": "Burg‘ilamoq",
+"meaning": "Parma bilan kovlamoq",
+"synonym": "Parmalamoq",
+"antonym": "Yopmoq"
+},
+{
+"word": "Burg‘u",
+"meaning": "Karnayga o‘xshash qadimiy cholg‘u asbobi",
+"synonym": "Karnay",
+"antonym": "—"
+},
+{
+"word": "Bus-butun",
+"meaning": "To‘liq va benuqson",
+"synonym": "Tamomila",
+"antonym": "Qisman"
+},
+{
+"word": "But",
+"meaning": "To‘liq, kamchiliksiz",
+"synonym": "Bekamu-ko‘st",
+"antonym": "Kam"
+},
+{
+"word": "Buromad",
+"meaning": "Sarf-xarajat",
+"synonym": "Chiqim",
+"antonym": "Daromad"
+},
+{
+"word": "Buroq",
+"meaning": "Diniy rivoyatlarda uchuvchi ot",
+"synonym": "Afsonaviy ot",
+"antonym": "—"
+},
+{
+"word": "Buranda",
+"meaning": "Kesish uchun ishlatiladigan asbob",
+"synonym": "Kesgich",
+"antonym": "—"
+},
+{
+"word": "Burga",
+"meaning": "Qon so‘ruvchi mayda hasharot",
+"synonym": "Parazit",
+"antonym": "—"
+},
+{
+"word": "Burgan",
+"meaning": "Bir yillik begona o‘t",
+"synonym": "Begona o‘t",
+"antonym": "—"
+},
+{
+"word": "Burganzor",
+"meaning": "Burgan o‘sgan maydon",
+"synonym": "O‘tloq",
+"antonym": "—"
+},
+{
+"word": "Burgut",
+"meaning": "Yirik yirtqich qush",
+"synonym": "Lochin",
+"antonym": "Kabutar"
+},
+{
+"word": "Burgutona",
+"meaning": "Burgutga xos kuchli",
+"synonym": "Changalbardosh",
+"antonym": "Zaif"
+},
+{
+"word": "Burgutsimon",
+"meaning": "Burgutga o‘xshash",
+"synonym": "O‘xshash",
+"antonym": "Farqli"
+},
+{
+"word": "Burgutsifat",
+"meaning": "Burgutdek jasur",
+"synonym": "Jasur",
+"antonym": "Qo‘rqoq"
+},
+{
+"word": "Burd",
+"meaning": "Obro‘ va e’tibor",
+"synonym": "Obro‘",
+"antonym": "Sharmandalik"
+},
+{
+"word": "Butunlayin",
+"meaning": "Tamoman",
+"synonym": "Tamoman",
+"antonym": "Qisman"
+},
+{
+"word": "Butunlamoq",
+"meaning": "But holga keltirmoq",
+"synonym": "Butlamoq",
+"antonym": "Buzmoq"
+},
+{
+"word": "Butunligicha",
+"meaning": "Bo‘linmasdan butun holda",
+"synonym": "Yaxlit",
+"antonym": "Bo‘laklab"
+},
+{
+"word": "Butunlik",
+"meaning": "Yaxlitlik, mukammallik",
+"synonym": "Yaxlitlik",
+"antonym": "Bo‘linish"
+},
+{
+"word": "Butxona",
+"meaning": "Butparastlar ibodatxonasi",
+"synonym": "Ibodatxona",
+"antonym": "—"
+},
+{
+"word": "Bufer",
+"meaning": "Zarbani yumshatish moslamasi",
+"synonym": "Amortizator",
+"antonym": "—"
+},
+{
+"word": "Bufet",
+"meaning": "Yengil ovqatlanish joyi",
+"synonym": "Tamaddixona",
+"antonym": "—"
+},
+{
+"word": "Bufetchi",
+"meaning": "Bufetda ishlovchi savdo xodimi",
+"synonym": "Sotuvchi",
+"antonym": "Xaridor"
+},
+{
+"word": "Bufetchilik",
+"meaning": "Bufetchi kasbi",
+"synonym": "Savdogarlik",
+"antonym": "—"
+},
+{
+"word": "Buterbrod",
+"meaning": "Ustiga mahsulot qo‘yilgan non",
+"synonym": "Sendvich",
+"antonym": "—"
+},
+{
+"word": "Butilka",
+"meaning": "Bo‘g‘zi tor shisha idish",
+"synonym": "Shisha idish",
+"antonym": "—"
+},
+{
+"word": "Bug‘doy",
+"meaning": "G‘alladosh o‘simlik",
+"synonym": "G‘alla",
+"antonym": "—"
+},
+{
+"word": "Bug‘doyzor",
+"meaning": "Bug‘doy ekilgan maydon",
+"synonym": "Dalazor",
+"antonym": "—"
+},
+{
+"word": "Bug‘doyiq",
+"meaning": "Ko‘p yillik yem-xashak o‘ti",
+"synonym": "O‘t",
+"antonym": "—"
+},
+{
+"word": "Bug‘doypoya",
+"meaning": "Bug‘doy o‘sib turgan poya",
+"synonym": "Poya",
+"antonym": "—"
+},
+{
+"word": "Bug‘doyrang",
+"meaning": "Bug‘doy tusidagi rang",
+"synonym": "Qoracharoq",
+"antonym": "Oq"
+},
+{
+"word": "Bug‘lagich",
+"meaning": "Bug‘ bilan ishlov beruvchi asbob",
+"synonym": "Purkagich",
+"antonym": "—"
+},
+{
+"word": "Bug‘lama",
+"meaning": "Bug‘da pishirilgan taom",
+"synonym": "Dimlama",
+"antonym": "—"
+},
+{
+"word": "Buyurtirmoq",
+"meaning": "Tayyorlab berishni so‘ramoq",
+"synonym": "Buyurtma bermoq",
+"antonym": "Bekor qilmoq"
+},
+{
+"word": "Buyurtirma",
+"meaning": "Buyurtma asosida tayyorlangan narsa",
+"synonym": "Buyurtma",
+"antonym": "Tayyor"
+},
+{
+"word": "Buyurmoq",
+"meaning": "Amr qilmoq",
+"synonym": "Topshiriq bermoq",
+"antonym": "Man etmoq"
+},
+{
+"word": "Buqa bo‘yin",
+"meaning": "Bo‘yni juda yo‘g‘on odam",
+"synonym": "Yo‘g‘onbo‘yin",
+"antonym": "Ingichkabo‘yin"
+},
+{
+"word": "Buqalamunlik",
+"meaning": "Tez o‘zgaruvchanlik",
+"synonym": "O‘zgaruvchanlik",
+"antonym": "Barqarorlik"
+},
+{
+"word": "Buqinmoq",
+"meaning": "Yashirinmoq",
+"synonym": "Pana qilmoq",
+"antonym": "Ko‘rinmoq"
+},
+{
+"word": "Buqoq",
+"meaning": "Qalqonsimon bez kasalligi",
+"synonym": "Zob",
+"antonym": "—"
+},
+{
+"word": "Bo‘g‘iz",
+"meaning": "Tomoqning qizilo‘ngach boshlanadigan qismi",
+"synonym": "Tomoq",
+"antonym": "—"
+},
+{
+"word": "Bo‘g‘izlamoq",
+"meaning": "Bo‘g‘ziga pichoq solib so‘ymoq",
+"synonym": "So‘ymoq",
+"antonym": "Asramoq"
+},
+{
+"word": "Bo‘g‘izlanmoq",
+"meaning": "Bo‘g‘izlab o‘ldirilmoq",
+"synonym": "So‘yilmoq",
+"antonym": "Tirik qolmoq"
+},
+{
+"word": "Bo‘g‘ilmoq",
+"meaning": "Nafasi qisilib qolmoq",
+"synonym": "Dimlanmoq",
+"antonym": "Ochilib ketmoq"
+},
+{
+"word": "Bo‘g‘im",
+"meaning": "Suyaklarning birikkan joyi",
+"synonym": "Mafasil",
+"antonym": "—"
+},
+{
+"word": "Bo‘g‘in",
+"meaning": "Segment yoki bo‘linma",
+"synonym": "Segment",
+"antonym": "—"
+},
+{
+"word": "Bo‘yashmoq",
+"meaning": "Birgalikda bo‘yamoq",
+"synonym": "Ranglamoq",
+"antonym": "Oqartirmoq"
+},
+{
+"word": "Bo‘qoq",
+"meaning": "Buqoq kasalligining boshqa nomi",
+"synonym": "Zob",
+"antonym": "—"
+},
+{
+"word": "Bo‘qcha",
+"meaning": "Bo‘xcha shakli",
+"synonym": "Bo‘xcha",
+"antonym": "—"
+},
+{
+"word": "Bo‘g‘dirma",
+"meaning": "Yashirin cho‘ntak",
+"synonym": "Yashirin cho‘ntak",
+"antonym": "—"
+},
+{
+"word": "Bo‘g‘joma",
+"meaning": "Buyum tugiladigan katta mato",
+"synonym": "Bo‘xcha",
+"antonym": "—"
+},
+{
+"word": "Bo‘sh-bayov",
+"meaning": "Lapashang odam",
+"synonym": "Lapashang",
+"antonym": "Chaqqon"
+},
+{
+"word": "Bo‘shliq",
+"meaning": "Ichida hech narsa yo‘q joy",
+"synonym": "Xoli joy",
+"antonym": "To‘liqlik"
+},
+{
+"word": "Bo‘g‘ma",
+"meaning": "Bo‘g‘ib o‘ldiradigan ilon",
+"synonym": "Burmali ilon",
+"antonym": "—"
+},
+{
+"word": "Bo‘g‘moq",
+"meaning": "Nafasni qisib qo‘ymoq",
+"synonym": "Siqmoq",
+"antonym": "Bo‘shatmoq"
+},
+{
+"word": "Bo‘g‘in-bo‘g‘in",
+"meaning": "Segmentlarga bo‘lingan",
+"synonym": "Segmentli",
+"antonym": "Yaxlit"
+},
+{
+"word": "Bo‘g‘inli",
+"meaning": "Bo‘g‘inlarga ega",
+"synonym": "Segmentli",
+"antonym": "Bo‘g‘insiz"
+},
+{
+"word": "Bo‘g‘irsoq",
+"meaning": "Xamirdan qovurib tayyorlanadigan taom",
+"synonym": "Qovurma non",
+"antonym": "—"
+},
+{
+"word": "Bo‘g‘ish",
+"meaning": "Yoqalashish yoki olishish",
+"synonym": "Janjal",
+"antonym": "Kelishish"
+},
+{
+"word": "Bo‘g‘ishma",
+"meaning": "Olishish",
+"synonym": "Janjal",
+"antonym": "Sulh"
+},
+{
+"word": "Bo‘g‘ishmoq",
+"meaning": "Bir-biri bilan olishmoq",
+"synonym": "Yoqalashmoq",
+"antonym": "Yarashmoq"
+},
+{
+"word": "Bo‘g‘iq",
+"meaning": "Xirillagan ovoz",
+"synonym": "Xirillagan",
+"antonym": "Jarangdor"
+},
+{
+"word": "Vayron-valangor",
+"meaning": "Butunlay buzilgan yoki xarob",
+"synonym": "Xaroba",
+"antonym": "Obod"
+},
+{
+"word": "Vayrongarchilik",
+"meaning": "Talofat yetkazish",
+"synonym": "Talofat",
+"antonym": "Bunyodkorlik"
+},
+{
+"word": "Vayronlik",
+"meaning": "Xarob holat",
+"synonym": "Xarobalik",
+"antonym": "Obodlik"
+},
+{
+"word": "Vaysamoq",
+"meaning": "Bema’ni gapirmoq",
+"synonym": "Aljiramoq",
+"antonym": "Jiddiy gapirmoq"
+},
+{
+"word": "Vaysaqi",
+"meaning": "Ko‘p gapiradigan odam",
+"synonym": "Gapdon",
+"antonym": "Kamgap"
+},
+{
+"word": "Vaysaqilik",
+"meaning": "Ko‘p gapirish odati",
+"synonym": "Gapbozlik",
+"antonym": "Jiddiylik"
+},
+{
+"word": "Vakansiya",
+"meaning": "Bo‘sh lavozim",
+"synonym": "Bo‘sh o‘rin",
+"antonym": "Band o‘rin"
+},
+{
+"word": "Vakil",
+"meaning": "Biror shaxs nomidan ish yurituvchi",
+"synonym": "Namoyanda",
+"antonym": "Oddiy a’zo"
+},
+{
+"word": "Vakila",
+"meaning": "Ayol vakil",
+"synonym": "Namoyanda",
+"antonym": "—"
+},
+{
+"word": "Vakillik",
+"meaning": "Boshqa shaxs nomidan ish yuritish huquqi",
+"synonym": "Vakolat",
+"antonym": "—"
+},
+{
+"word": "Vaziyat",
+"meaning": "Holat yoki sharoit",
+"synonym": "Holat",
+"antonym": "Barqarorlik"
+},
+{
+"word": "Vazmin",
+"meaning": "Bosiq va salobatli",
+"synonym": "Salobatli",
+"antonym": "Yengil"
+},
+{
+"word": "Vazminlik",
+"meaning": "Bosiqlik",
+"synonym": "Bosiqlik",
+"antonym": "Shoshqaloqlik"
+},
+{
+"word": "Vazn",
+"meaning": "Og‘irlik yoki o‘lchov",
+"synonym": "Og‘irlik",
+"antonym": "Yengillik"
+},
+{
+"word": "Vaznsizlik",
+"meaning": "Og‘irlik yo‘qligi",
+"synonym": "Og‘irliksiz holat",
+"antonym": "Og‘irlik"
+},
+{
+"word": "Vazir",
+"meaning": "Davlat boshqaruvidagi rahbar",
+"synonym": "Minister",
+"antonym": "Oddiy fuqaro"
+},
+{
+"word": "Vazifa",
+"meaning": "Bajarilishi kerak bo‘lgan ish",
+"synonym": "Topshiriq",
+"antonym": "Bekorchilik"
+},
+{
+"word": "Vaj",
+"meaning": "Maqsad",
+"synonym": "Maqsad",
+"antonym": "—"
+},
+{
+"word": "Vajohat",
+"meaning": "Tashqi ko‘rinish",
+"synonym": "Qiyofa",
+"antonym": "Xunuklik"
+},
+{
+"word": "Vaza",
+"meaning": "Gul solinadigan idish",
+"synonym": "Idish",
+"antonym": "—"
+},
+{
+"word": "Vazelin",
+"meaning": "Tibbiy moy",
+"synonym": "Malham",
+"antonym": "—"
+},
+{
+"word": "Vagon",
+"meaning": "Temir yo‘l transporti",
+"synonym": "Temir yo‘l transporti",
+"antonym": "—"
+},
+{
+"word": "Vagoncha",
+"meaning": "Kichik vagon",
+"synonym": "Kichik vagon",
+"antonym": "Katta vagon"
+},
+{
+"word": "Vaksina",
+"meaning": "Kasallikdan himoya qiluvchi em",
+"synonym": "Emdor",
+"antonym": "—"
+},
+{
+"word": "Vakuum",
+"meaning": "Bosimi past bo‘lgan bo‘shliq",
+"synonym": "Bo‘shliq",
+"antonym": "Atmosfera"
+},
+{
+"word": "Vanilin",
+"meaning": "Vanil hidli modda",
+"synonym": "Vanil ekstrakti",
+"antonym": "—"
+},
+{
+"word": "Vanil",
+"meaning": "Ziravor o‘simlik",
+"synonym": "Ziravor",
+"antonym": "—"
+},
+{
+"word": "Vanna",
+"meaning": "Cho‘milish idishi",
+"synonym": "Cho‘milish idishi",
+"antonym": "—"
+},
+{
+"word": "Varaq",
+"meaning": "Qog‘oz sahifasi",
+"synonym": "Sahifa",
+"antonym": "—"
+},
+{
+"word": "Vals",
+"meaning": "Uch taktli raqs",
+"synonym": "Raqs",
+"antonym": "—"
+},
+{
+"word": "Valyuta",
+"meaning": "Pul birligi",
+"synonym": "Pul",
+"antonym": "—"
+},
+{
+"word": "Vaqt",
+"meaning": "Davomiylik o‘lchovi",
+"synonym": "Lahza",
+"antonym": "Abadiylik"
+}
+]
