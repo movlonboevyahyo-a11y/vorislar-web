@@ -1652,7 +1652,8 @@ function searchWord(){
 const input = document
 .getElementById("searchInput")
 .value
-.toLowerCase();
+.toLowerCase()
+.trim();
 
 const resultBox = document.getElementById("result");
 
@@ -1662,8 +1663,13 @@ return;
 }
 
 const results = words.filter(w =>
-w.word.toLowerCase().startsWith(input)
+w.word.toLowerCase().includes(input)
 );
+
+if(results.length === 0){
+resultBox.innerHTML = "❌ So‘z topilmadi";
+return;
+}
 
 let html="";
 
@@ -1675,13 +1681,4 @@ html += `
 
 resultBox.innerHTML = html;
 
-}= "❌ So‘z topilmadi";
-
 }
-
-}
-
-</script>
-
-</body>
-</html>
