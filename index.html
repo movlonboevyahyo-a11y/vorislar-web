@@ -1,8 +1,51 @@
-<!DOCTYPE html><html lang="uz">
-<head><meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>O'zbek Lug'ati</title><link rel="stylesheet" href="style.css"></head><body><h1>📖 O'zbek Lug'ati</h1><div class="menu">
-<a href="index.html">📖 Lug'at</a>
-<a href="essay.html">📝 Esse</a>
-<a href="test.html">🧠 Test</a>
-</div><input id="searchInput" type="text" placeholder="So'z yozing..."><div id="results"></div><script src="app.js"></script></body>
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ona Tili WebApp</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+    <div id="app">
+        <section id="home" class="page active">
+            <div class="header">
+                <input type="text" placeholder="So'zni qidiring..." class="search-bar">
+            </div>
+            <div class="banner">
+                <h3>MILLIY SERTIFIKAT</h3>
+                <p>Ona tili xazinasidan izlang</p>
+            </div>
+            <div class="card">
+                <h4>Kun so'zi</h4>
+                <b id="word-of-day">Ma'rifat</b>
+                <p>Bilim va madaniyatni yoyish faoliyati.</p>
+            </div>
+        </section>
+
+        <section id="katalog" class="page">
+            <h2>Mavzular katalogi</h2>
+            <div class="grid-container" id="category-list">
+                </div>
+        </section>
+
+        <section id="esse" class="page">
+            <h2>AI Esse Tekshiruvi</h2>
+            <div class="card">
+                <p>Mavzu: <b>Ona tilining milliy o'zlikni anglashdagi o'rni</b></p>
+                <textarea placeholder="Inshongizni bu yerga yozing..." rows="10"></textarea>
+                <button class="btn-primary">AI bilan tahlil qilish</button>
+            </div>
+        </section>
+
+        <nav class="bottom-nav">
+            <div onclick="showPage('home')">🏠<br>Asosiy</div>
+            <div onclick="showPage('katalog')">📂<br>Katalog</div>
+            <div onclick="showPage('esse')">✍️<br>Esse</div>
+            <div onclick="showPage('profil')">👤<br>Profil</div>
+        </nav>
+    </div>
+    <script src="script.js"></script>
+</body>
 </html>
