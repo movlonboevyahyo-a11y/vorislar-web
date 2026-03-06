@@ -1,60 +1,15 @@
 <!DOCTYPE html><html lang="uz">
-<head><meta charset="UTF-8">
-<title>Esse yozish</title><link rel="stylesheet" href="style.css"><style>
+<head>
+<meta charset="UTF-8">
+<title>Esse</title>
+<link rel="stylesheet" href="style.css">
+</head><body><h2>Esse yozish</h2><textarea id="essayText" placeholder="Esse yozing..."></textarea><p>So'zlar soni: <span id="count">0</span></p><button>AI bilan tahlil qilish (demo)</button>
 
-.topic{
-background:#2563eb;
-margin:8px;
-padding:10px;
-border-radius:8px;
-cursor:pointer;
-}
-
-.topic:hover{
-background:#1d4ed8;
-}
-
-</style></head><body><h1>📝 Esse yozish</h1><h2>Esse mavzulari</h2><div class="topic" onclick="selectTopic(this)">
-1. Hukumat yo'llar va avtomobil yo'llarini yaxshilashga ko'proq pul sarflashlari kerakmi yoki hukumat jamoat transportini yaxshilashga ko'proq pul sarflashlari kerakmi?
-</div><div class="topic" onclick="selectTopic(this)">
-2. Odamlar hayotini yanada zavqli qilish uchun ixtiyoriy xarajatlarini ko‘paytirib yuboradilar. Siz bu masalaga qanday yondashasiz?
-</div><div class="topic" onclick="selectTopic(this)">
-3. Televideniya orqali namoyish qilinadigan turli mahsulotlar reklamalariga koʻpchilik salbiy munosabat bildiradi. Ayrimlar esa bunday reklamalarni kerakli deb hisoblashadi.
-</div><div class="topic" onclick="selectTopic(this)">
-4. Ko‘pchilik plastik qadoqdagi suvni afzal ko‘rsa, ayrimlar vodoprovod suvi iste'mol uchun foydali ekanligini ta'kidlashadi.
-</div><div class="topic" onclick="selectTopic(this)">
-5. Intizom bugungi kundagi maktablarning asosiy muammolaridan biri. Ba'zilar bolaning tartib-intizomi uchun maktab javobgar deyishsa, ba'zilar bunga ota-onalar mas'ul deydi.
-</div><div class="topic" onclick="selectTopic(this)">
-6. Zamonaviy dunyoda kompyuterlardan tarjima maqsadida bemalol foydalanish mumkin. Til o‘rganishga vaqt ketkazishdan naf yo‘q.
-</div><div class="topic" onclick="selectTopic(this)">
-7. Ayrimlar oliy taʼlim yaxshi ish topish uchun kerak deb hisoblashadi, boshqalar esa oliy taʼlimning boshqa afzalliklari mavjud deyishadi.
-</div><div class="topic" onclick="selectTopic(this)">
-8. Bugungi kunda turli mahsulotlar reklamalariga ko‘pchilik salbiy munosabat bildiradi. Ayrimlar esa bunday reklamalarni kerakli deb hisoblashadi.
-</div><div class="topic" onclick="selectTopic(this)">
-9. Tarixni yoritishda ikki xil yondashuv mavjud: haqqoniy tarix va davr nuqtayi nazaridan yozilgan tarix.
-</div><div class="topic" onclick="selectTopic(this)">
-10. Chet elda ishlayotganlar iqtisodiyotga foyda keltiradimi? Ba'zilar ularni yurtimizga qaytarish kerak deb hisoblaydi.
-</div><div class="topic" onclick="selectTopic(this)">
-11. Alifboga o'zgartirish kiritish bo'yicha takliflar munozarali mavzuga aylandi.
-</div><h2 id="selectedTopic"></h2><textarea id="essayText" placeholder="Esse yozing..."></textarea><p>So'zlar soni: <span id="wordCount">0</span></p><script>
-
-function selectTopic(el){
-document.getElementById("selectedTopic").innerText = el.innerText
-}
-
-const textarea = document.getElementById("essayText")
-
-textarea.addEventListener("input",function(){
-
-let words = textarea.value.trim().split(/\s+/)
-
-if(words[0]==""){
-document.getElementById("wordCount").innerText=0
-}else{
-document.getElementById("wordCount").innerText=words.length
-}
-
-})
-
-</script></body>
+<nav class="bottom-nav">
+<a href="index.html">Qidiruv</a>
+<a href="catalog.html">Katalog</a>
+<a href="test.html">Testlar</a>
+<a href="essay.html">Esse</a>
+<a href="profile.html">Profil</a>
+</nav><script src="essay.js"></script></body>
 </html>
