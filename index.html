@@ -2,137 +2,73 @@
 <html lang="uz">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Vorislar WebApp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Vorislar App</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
 </head>
 <body>
-    <div id="app">
-        <section id="qidiruv" class="page active">
-            <div class="header-main">
-                <span class="icon-lib">📖</span>
-                <h2>Qidiruv</h2>
-                <span class="icon-bell">🔔</span>
+    <div id="wrapper">
+        <div id="qidiruv" class="content-section active">
+            <header class="header">
+                <div class="logo-area">📖 <span>Qidiruv</span></div>
+                <div class="notif">🔔</div>
+            </header>
+            <div class="main-banner">
+                <p>MILLIY SERTIFIKAT</p>
+                <h2>Ona tili xazinasidan izlang</h2>
             </div>
-            <div class="blue-banner">
-                <small>MILLIY SERTIFIKAT</small>
-                <h1>Ona tili xazinasidan izlang</h1>
-            </div>
-            <div class="search-container">
+            <div class="search-bar">
                 <input type="text" placeholder="So'zni qidiring...">
             </div>
-            <div class="daily-word card">
-                <div class="card-header">
-                    <h3>Ma'rifat</h3>
-                    <span>⭐</span>
-                </div>
-                <p>Bilim va madaniyatni yoyish; kishilarning ongi va bilimini oshirishga qaratilgan faoliyat.</p>
-                <div class="word-type"><span>OT</span> <span>ARCHAIC</span></div>
+            <div class="day-card">
+                <div class="row"><h3>Ma'rifat</h3> ⭐</div>
+                <p>Bilim va madaniyatni yoyish faoliyati.</p>
+                <div class="badges"><span>OT</span><span>ARCHAIC</span></div>
             </div>
-        </section>
+        </div>
 
-        <section id="katalog" class="page">
-            <div class="top-nav">
-                <span class="back-btn" onclick="showPage('qidiruv')">❮</span>
-                <h2>Mavzular katalogi</h2>
-            </div>
-            <div class="category-list">
-                <div class="cat-card">
-                    <div class="cat-info">
-                        <small class="test-count">45 TA TEST</small>
-                        <h3>Grammatika</h3>
-                        <p>Morfologiya, sintaksis va punktuatsiya qoidalari.</p>
-                        <button class="btn-blue">Boshlash ›</button>
-                    </div>
-                    <div class="cat-image crystal"></div>
+        <div id="katalog" class="content-section">
+            <div class="top-bar">❮ <span>Mavzular katalogi</span></div>
+            <div id="catalog-items" class="scroll-area">
                 </div>
-                </div>
-        </section>
+        </div>
 
-        <section id="esse" class="page">
-            <div class="top-nav">
-                <span class="back-btn">❮</span>
-                <h2>AI Esse Tekshiruvi</h2>
-                <span class="history">🕒</span>
+        <div id="esse" class="content-section">
+            <div class="top-bar">❮ <span>AI Esse Tekshiruvi</span> 🕒</div>
+            <div class="esse-box">
+                <div class="topic-label">TANLANGAN MAVZU</div>
+                <h4>Ona tilining milliy o'zlikni anglashdagi o'rni</h4>
+                <div class="input-wrap">
+                    <textarea placeholder="Inshongizni yozing..."></textarea>
+                    <span class="counter">0 / 500</span>
+                </div>
+                <button class="btn-glow">✨ AI bilan tahlil qilish</button>
             </div>
-            <div class="esse-content">
-                <div class="topic-box">
-                    <small>TANLANGAN MAVZU</small>
-                    <h4>Ona tilining milliy o'zlikni anglashdagi o'rni va ahamiyati</h4>
-                    <p>Kamida 250 so'm, B2/C1 darajasi</p>
-                </div>
-                <div class="input-area">
-                    <textarea placeholder="Inshongizni shu yerga yozing yoki nusxa ko'chirib o'tkazing..."></textarea>
-                    <div class="char-count">152 / 500 so'z</div>
-                </div>
-                <button class="btn-ai">✨ AI bilan tahlil qilish</button>
-                
-                <div class="results-grid card">
-                    <div class="res-item">
-                        <small>Grammatika</small>
-                        <p>4 ta xato</p>
-                    </div>
-                    <div class="res-item">
-                        <small>Uslub</small>
-                        <p>A'lo</p>
-                    </div>
-                    <div class="total-score">85/100 ball</div>
-                </div>
-            </div>
-        </section>
+        </div>
 
-        <section id="reyting" class="page">
-            <div class="top-nav"><h2>Reyting</h2></div>
-            <div class="tab-menu">
+        <div id="reyting" class="content-section">
+            <div class="top-bar">❮ <span>Reyting</span> 🏆</div>
+            <div class="tabs">
                 <button class="active">Haftalik</button>
                 <button>Oylik</button>
                 <button>Umumiy</button>
             </div>
             <div class="podium">
-                <div class="p-item p2">
-                    <div class="avatar"></div>
-                    <p>Jasur B.</p>
-                    <b>2,450</b>
-                </div>
-                <div class="p-item p1">
-                    <div class="crown">👑</div>
-                    <div class="avatar"></div>
-                    <p>Azizbek R.</p>
-                    <b>2,850</b>
-                </div>
-                <div class="p-item p3">
-                    <div class="avatar"></div>
-                    <p>Malika O.</p>
-                    <b>2,100</b>
-                </div>
+                <div class="rank r2"><div class="avatar"></div><p>Jasur B.</p></div>
+                <div class="rank r1"><div class="crown">👑</div><div class="avatar"></div><p>Azizbek R.</p></div>
+                <div class="rank r3"><div class="avatar"></div><p>Malika O.</p></div>
             </div>
-            <div class="other-list card">
-                <div class="user-row"><span>4. Sevara Karimova</span> <b>1,920 ball</b></div>
-                </div>
-        </section>
-
-        <section id="profil" class="page">
-            <div class="profile-header">
-                <div class="user-avatar-main"></div>
-                <h2>Azizbek Toirov</h2>
-                <p>Sertifikat darajasi: B2</p>
-                <span class="user-id">ID: 12345</span>
-            </div>
-            <div class="premium-box card">
-                <p>⭐ Premiumga o'ting</p>
-                <button class="btn-buy">Sotib olish</button>
-            </div>
-        </section>
-
-        <nav class="footer-nav">
-            <div class="nav-item" onclick="showPage('qidiruv')">🔍<br>Qidiruv</div>
-            <div class="nav-item" onclick="showPage('katalog')">📂<br>Katalog</div>
-            <div class="nav-item" onclick="showPage('esse')">✍️<br>Esse</div>
-            <div class="nav-item" onclick="showPage('reyting')">📊<br>Reyting</div>
-            <div class="nav-item" onclick="showPage('profil')">👤<br>Profil</div>
-        </nav>
+        </div>
     </div>
+
+    <nav class="navbar">
+        <div class="nav-item active" onclick="navTo('qidiruv')">🔍<br>Qidiruv</div>
+        <div class="nav-item" onclick="navTo('katalog')">📂<br>Katalog</div>
+        <div class="nav-item" onclick="navTo('esse')">✍️<br>Esse</div>
+        <div class="nav-item" onclick="navTo('reyting')">📊<br>Reyting</div>
+    </nav>
+
     <script src="script.js"></script>
 </body>
 </html>
