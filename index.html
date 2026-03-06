@@ -1,16 +1,231 @@
 <!DOCTYPE html><html lang="uz">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Ona Tili Platformasi</title>
-<link rel="stylesheet" href="style.css">
-</head><body><header>
-<h2>🔎 Qidiruv</h2>
-</header><section class="search-box"><input id="searchInput" placeholder="So'zni qidiring..."><div id="results"></div></section><section class="word-day"><h3>📘 Kun so'zi</h3><div id="wordDay"></div></section><nav class="bottom-nav"><a href="index.html">Qidiruv</a>
-<a href="catalog.html">Katalog</a>
-<a href="test.html">Testlar</a>
-<a href="essay.html">Esse</a>
-<a href="profile.html">Profil</a>
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Ona Tili Platformasi</title><style>
 
-</nav><script src="search.js"></script></body>
+body{
+background:#0b1220;
+color:#e5e7eb;
+font-family:Arial;
+margin:0;
+}
+
+header{
+padding:20px;
+font-size:22px;
+font-weight:bold;
+}
+
+.container{
+padding:20px;
+padding-bottom:80px;
+}
+
+input{
+width:100%;
+padding:14px;
+border-radius:10px;
+border:none;
+margin-top:10px;
+font-size:16px;
+}
+
+.card{
+background:#1e293b;
+padding:15px;
+margin-top:12px;
+border-radius:12px;
+}
+
+button{
+background:#3b82f6;
+border:none;
+padding:12px;
+border-radius:8px;
+color:white;
+margin-top:10px;
+width:100%;
+}
+
+.bottom{
+position:fixed;
+bottom:0;
+width:100%;
+background:#020617;
+display:flex;
+justify-content:space-around;
+padding:12px;
+}
+
+.bottom a{
+color:white;
+text-decoration:none;
+font-size:14px;
+}
+
+.page{
+display:none;
+}
+
+.active{
+display:block;
+}
+
+</style></head>
+<body><header>📚 Ona tili platformasi</header><div class="container"><!-- QIDIRUV --><div id="home" class="page active"><h3>🔎 Qidiruv</h3><input id="searchInput" placeholder="So'z qidiring..."><div id="results"></div><h3 style="margin-top:20px">📘 Kun so'zi</h3><div id="wordDay" class="card"></div></div><!-- KATALOG --><div id="catalog" class="page"><h3>Mavzular katalogi</h3><div class="card">Fonetik tahlil</div>
+<div class="card">Leksikologiya</div>
+<div class="card">Sinonimlar</div>
+<div class="card">Antonimlar</div>
+<div class="card">Frazeologiya</div>
+<div class="card">So‘z yasalishi</div>
+<div class="card">Morfologiya</div>
+<div class="card">Sintaksis</div>
+<div class="card">Imlo</div>
+<div class="card">Punktuatsiya</div></div><!-- TEST --><div id="test" class="page"><h3>Testlar</h3><div id="testBox" class="card"></div><button onclick="nextTest()">Keyingi savol</button>
+
+<p id="score"></p></div><!-- ESSE --><div id="essay" class="page"><h3>Esse mavzulari</h3><div class="card">1. Ona tilining jamiyatdagi o‘rni</div>
+<div class="card">2. Kitob o‘qish madaniyati</div>
+<div class="card">3. Yoshlar va internet</div>
+<div class="card">4. O‘zbek tilining boyligi</div>
+<div class="card">5. Til va millat</div>
+<div class="card">6. Ta’lim sifati</div>
+<div class="card">7. Vatanparvarlik</div>
+<div class="card">8. Texnologiya va ta’lim</div>
+<div class="card">9. Adabiyotning roli</div>
+<div class="card">10. O‘z ustida ishlash</div><textarea id="essayText" placeholder="Esse yozing..." style="width:100%;height:150px;margin-top:15px;"></textarea><p>So'zlar soni: <span id="count">0</span></p><button>AI bilan tahlil qilish (demo)</button>
+
+</div><!-- PROFIL --><div id="profile" class="page"><h3>Profil</h3><div class="card"><h4>Foydalanuvchi</h4><p>ID: 12345</p><button>Premiumga o'tish</button>
+
+</div></div></div><!-- MENU --><div class="bottom"><a onclick="showPage('home')">Qidiruv</a>
+<a onclick="showPage('catalog')">Katalog</a>
+<a onclick="showPage('test')">Testlar</a>
+<a onclick="showPage('essay')">Esse</a>
+<a onclick="showPage('profile')">Profil</a>
+
+</div><script>
+
+/* PAGES */
+
+function showPage(id){
+
+document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"))
+
+document.getElementById(id).classList.add("active")
+
+}
+
+/* WORDS */
+
+const words=[
+
+{word:"Ma'rifat",meaning:"Bilim va ongni rivojlantirish"},
+{word:"Anonim",meaning:"Muallifi noma'lum"},
+{word:"Ziyo",meaning:"Ma'naviy yorug'lik"},
+{word:"Tafakkur",meaning:"Fikr yuritish"},
+{word:"Adab",meaning:"Odob va hurmat"},
+{word:"Ilm",meaning:"Bilim"},
+{word:"Til",meaning:"Aloqa vositasi"},
+{word:"Madaniyat",meaning:"Ma'naviy taraqqiyot"},
+{word:"Ijod",meaning:"Yaratish faoliyati"},
+{word:"Fikr",meaning:"Mulohaza"}
+
+]
+
+/* WORD OF DAY */
+
+let random=words[Math.floor(Math.random()*words.length)]
+
+document.getElementById("wordDay").innerHTML=
+
+"<b>"+random.word+"</b><p>"+random.meaning+"</p>"
+
+/* SEARCH */
+
+document.getElementById("searchInput").addEventListener("input",function(){
+
+let q=this.value.toLowerCase()
+
+let r=document.getElementById("results")
+
+r.innerHTML=""
+
+words.filter(w=>w.word.toLowerCase().includes(q)).forEach(w=>{
+
+r.innerHTML+="<div class='card'><b>"+w.word+"</b><p>"+w.meaning+"</p></div>"
+
+})
+
+})
+
+/* TEST */
+
+const tests=[
+
+{q:"Sinonim nima?",a:"Bir xil ma'noli so'z",b:"Qarama qarshi so'z",c:"Ko'p ma'noli",correct:"a"},
+{q:"Antonim nima?",a:"O'xshash",b:"Qarama qarshi",c:"Sinonim",correct:"b"},
+{q:"Leksikologiya nimani o‘rganadi?",a:"So‘z boyligini",b:"Gapni",c:"Harflarni",correct:"a"},
+{q:"Fonetik nima?",a:"Tovushlar",b:"Gap",c:"Matn",correct:"a"},
+{q:"Imlo nima?",a:"Yozish qoidasi",b:"Gap tuzilishi",c:"Matn",correct:"a"},
+{q:"Sintaksis nima?",a:"Gap tuzilishi",b:"So‘z",c:"Tovush",correct:"a"},
+{q:"Frazeologiya nima?",a:"Barqaror birikma",b:"Harflar",c:"Gap",correct:"a"},
+{q:"So‘z yasalishi?",a:"Yangi so‘z",b:"Gap",c:"Matn",correct:"a"},
+{q:"Morfologiya?",a:"So‘z turkumlari",b:"Gap",c:"Harflar",correct:"a"},
+{q:"Punktuatsiya?",a:"Tinish belgisi",b:"So‘z",c:"Matn",correct:"a"}
+
+]
+
+let index=0
+let score=0
+
+function showTest(){
+
+let t=tests[index]
+
+document.getElementById("testBox").innerHTML=
+
+"<b>"+t.q+"</b><br><br>"+
+"<button onclick=\"answer('a')\">"+t.a+"</button>"+
+"<button onclick=\"answer('b')\">"+t.b+"</button>"+
+"<button onclick=\"answer('c')\">"+t.c+"</button>"
+
+}
+
+function answer(a){
+
+if(a==tests[index].correct) score++
+
+index++
+
+if(index<tests.length){
+
+showTest()
+
+}else{
+
+document.getElementById("score").innerText="Natija: "+score+"/10"
+
+}
+
+}
+
+function nextTest(){
+
+showTest()
+
+}
+
+showTest()
+
+/* ESSAY COUNT */
+
+let text=document.getElementById("essayText")
+
+text.addEventListener("input",function(){
+
+let w=text.value.trim().split(/\s+/)
+
+document.getElementById("count").innerText=w[0]==""?0:w.length
+
+})
+
+</script></body>
 </html>
