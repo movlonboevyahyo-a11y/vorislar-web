@@ -1,52 +1,46 @@
-body{
-
-background:#0f172a;
-color:white;
-font-family:Arial;
-text-align:center;
-padding:30px;
-
+:root {
+    --bg: #0f172a;
+    --card: #1e293b;
+    --accent: #3b82f6;
+    --text: #ffffff;
+    --text-dim: #94a3b8;
 }
 
-.menu a{
-
-text-decoration:none;
-background:#2563eb;
-color:white;
-padding:10px 18px;
-margin:5px;
-border-radius:8px;
-
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0; padding-bottom: 70px;
 }
 
-input{
+.page { display: none; padding: 20px; }
+.page.active { display: block; }
 
-width:80%;
-padding:12px;
-border-radius:10px;
-border:none;
-font-size:18px;
-
+.card {
+    background: var(--card);
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 15px;
+    border: 1px solid #334155;
 }
 
-textarea{
-
-width:90%;
-height:200px;
-padding:10px;
-font-size:16px;
-
+.search-bar {
+    width: 100%; padding: 12px;
+    border-radius: 10px; border: none;
+    background: var(--card); color: white;
 }
 
-button{
+.bottom-nav {
+    position: fixed; bottom: 0; width: 100%;
+    background: var(--card); display: flex;
+    justify-content: space-around; padding: 10px 0;
+    border-top: 1px solid #334155;
+}
 
-padding:12px 20px;
-margin:10px;
-border:none;
-border-radius:8px;
-background:#2563eb;
-color:white;
-font-size:16px;
-cursor:pointer;
+.bottom-nav div { font-size: 12px; cursor: pointer; text-align: center; }
 
+.btn-primary {
+    width: 100%; background: var(--accent);
+    color: white; border: none; padding: 12px;
+    border-radius: 10px; font-weight: bold;
 }
