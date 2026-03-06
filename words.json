@@ -1265,4 +1265,14 @@
 "synonym": "Lahza",
 "antonym": "Abadiylik"
 }
+{"word":"Ma'rifat","meaning":"Bilim va ong","synonym":"Ilm"},
+{"word":"Anonim","meaning":"Muallifi noma'lum","synonym":"Nomsiz"},
+{"word":"Ziyo","meaning":"Yorug'lik","synonym":"Nur"},
+{"word":"Tafakkur","meaning":"Fikr yuritish","synonym":"O'ylash"},
+{"word":"Adab","meaning":"Odob","synonym":"Axloq"},
+{"word":"Ilm","meaning":"Bilim","synonym":"Ma'rifat"},
+{"word":"Til","meaning":"Aloqa vositasi","synonym":"Nutq"},
+{"word":"Madaniyat","meaning":"Ma'naviy taraqqiyot","synonym":"Savod"},
+{"word":"Ijod","meaning":"Yaratish","synonym":"Yaratish"},
+{"word":"Fikr","meaning":"O'y","synonym":"Mulohaza"}
 ]
