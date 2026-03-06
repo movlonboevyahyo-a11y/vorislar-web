@@ -1,0 +1,16 @@
+[
+{
+"question":"Sinonim nima?",
+"a":"Bir xil ma'noli so'z",
+"b":"Qarama qarshi so'z",
+"c":"Ko'p ma'noli so'z",
+"correct":"a"
+},
+{
+"question":"Antonim nima?",
+"a":"Bir xil ma'noli",
+"b":"Qarama qarshi",
+"c":"O'xshash",
+"correct":"b"
+}
+]
