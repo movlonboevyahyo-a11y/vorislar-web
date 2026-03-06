@@ -262,3 +262,155 @@ document.getElementById("count").innerText=w[0]==""?0:w.length
 
 </script></body>
 </html>
+<!DOCTYPE html><html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ona tili xazinasi</title><style>
+
+body{
+margin:0;
+font-family:system-ui;
+background:#f5f7fb;
+}
+
+.container{
+padding:18px;
+padding-bottom:90px;
+}
+
+.title{
+font-size:24px;
+font-weight:700;
+margin-bottom:15px;
+}
+
+.banner{
+background:linear-gradient(135deg,#3b82f6,#1d4ed8);
+border-radius:18px;
+padding:22px;
+color:white;
+margin-bottom:18px;
+}
+
+.banner h2{
+margin:0;
+font-size:20px;
+}
+
+.search-box{
+background:white;
+border-radius:14px;
+padding:12px;
+box-shadow:0 5px 12px rgba(0,0,0,0.08);
+margin-bottom:14px;
+}
+
+.search-box input{
+width:100%;
+border:none;
+font-size:16px;
+outline:none;
+}
+
+.filters{
+display:flex;
+gap:8px;
+margin-bottom:18px;
+}
+
+.filters button{
+border:none;
+background:#e5e7eb;
+padding:8px 14px;
+border-radius:10px;
+font-size:13px;
+}
+
+.filters .active{
+background:#3b82f6;
+color:white;
+}
+
+.card{
+background:white;
+border-radius:14px;
+padding:14px;
+box-shadow:0 6px 15px rgba(0,0,0,0.07);
+margin-bottom:15px;
+}
+
+.word-title{
+font-weight:700;
+font-size:16px;
+}
+
+.recent-item{
+padding:12px;
+border-bottom:1px solid #eee;
+}
+
+nav{
+position:fixed;
+bottom:0;
+width:100%;
+background:white;
+border-top:1px solid #eee;
+display:flex;
+justify-content:space-around;
+padding:10px;
+}
+
+nav button{
+border:none;
+background:none;
+font-size:13px;
+color:#555;
+}
+
+</style></head><body><div class="container"><div class="title">Qidiruv</div><div class="banner">
+<h2>Milliy sertifikat</h2>
+<p>Ona tili xazinasidan izlang</p>
+</div><div class="search-box">
+<input id="searchInput" placeholder="So'zni qidiring...">
+</div><div class="filters">
+<button class="active">Barchasi</button>
+<button>Sinonimlar</button>
+<button>Antonimlar</button>
+</div><div class="card"><div class="word-title">Kun so‘zi</div>
+<br><div id="wordBox"></div></div><div class="card"><div class="word-title">Oxirgi qidiruvlar</div><div id="recent"></div></div></div><nav><button>Qidiruv</button>
+<button>Katalog</button>
+<button>Testlar</button>
+<button>Esse</button>
+<button>Profil</button>
+
+</nav><script>
+
+const words=[
+
+{word:"Ma'rifat",meaning:"Bilim va madaniyatni yoyish"},
+{word:"Ziyo",meaning:"Ma'naviy nur"},
+{word:"Tafakkur",meaning:"Fikr yuritish qobiliyati"},
+{word:"Adab",meaning:"Odob va hurmat"},
+{word:"Ilm",meaning:"Bilim olish jarayoni"}
+
+]
+
+let random=words[Math.floor(Math.random()*words.length)]
+
+document.getElementById("wordBox").innerHTML=
+"<b>"+random.word+"</b><p>"+random.meaning+"</p>"
+
+
+let recent=["Istiqlol","Ziyo","Ma'rifat"]
+
+let recentHTML=""
+
+recent.forEach(x=>{
+recentHTML+="<div class='recent-item'>"+x+"</div>"
+})
+
+document.getElementById("recent").innerHTML=recentHTML
+
+</script></body>
+</html>
