@@ -1,27 +1,52 @@
-let words=[]
+function showPage(id){
 
-fetch("words.json")
-.then(res=>res.json())
-.then(data=>{
-words=data
+document.querySelectorAll(".page").forEach(p=>{
+p.classList.remove("active")
 })
 
-document.getElementById("searchInput").addEventListener("input",function(){
+document.getElementById(id).classList.add("active")
 
-let input=this.value.toLowerCase()
+}
 
-let results=document.getElementById("results")
+/* KUN SO'ZI */
 
-results.innerHTML=""
+const words=[
 
-let filtered=words.filter(w=>w.word.toLowerCase().includes(input))
+{word:"Ma'rifat",meaning:"Bilim va madaniyatni yoyish"},
+{word:"Ziyo",meaning:"Ma'naviy nur"},
+{word:"Tafakkur",meaning:"Fikr yuritish qobiliyati"},
+{word:"Adab",meaning:"Odob va hurmat"},
+{word:"Ilm",meaning:"Bilim olish jarayoni"}
 
-filtered.forEach(w=>{
+]
 
-results.innerHTML+=`
+let random=words[Math.floor(Math.random()*words.length)]
 
-<div><h3>${w.word}</h3><p>${w.meaning}</p></div>`
+document.getElementById("wordDay").innerHTML=
+"<b>"+random.word+"</b><p>"+random.meaning+"</p>"
+
+/* OXIRGI QIDIRUV */
+
+let recent=["Istiqlol","Ziyo","Ma'rifat"]
+
+let html=""
+
+recent.forEach(x=>{
+
+html+="<p>"+x+"</p>"
 
 })
+
+document.getElementById("recent").innerHTML=html
+
+/* ESSE WORD COUNT */
+
+const essay=document.getElementById("essayInput")
+
+essay.addEventListener("input",function(){
+
+let words=essay.value.trim().split(/\s+/)
+
+document.getElementById("wordCount").innerText=words[0]==""?0:words.length
 
 })
