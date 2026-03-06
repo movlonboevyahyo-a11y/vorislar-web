@@ -1,74 +1,16 @@
-<!DOCTYPE html>
-<html lang="uz">
+<!DOCTYPE html><html lang="uz">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>Vorislar App</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
-</head>
-<body>
-    <div id="wrapper">
-        <div id="qidiruv" class="content-section active">
-            <header class="header">
-                <div class="logo-area">📖 <span>Qidiruv</span></div>
-                <div class="notif">🔔</div>
-            </header>
-            <div class="main-banner">
-                <p>MILLIY SERTIFIKAT</p>
-                <h2>Ona tili xazinasidan izlang</h2>
-            </div>
-            <div class="search-bar">
-                <input type="text" placeholder="So'zni qidiring...">
-            </div>
-            <div class="day-card">
-                <div class="row"><h3>Ma'rifat</h3> ⭐</div>
-                <p>Bilim va madaniyatni yoyish faoliyati.</p>
-                <div class="badges"><span>OT</span><span>ARCHAIC</span></div>
-            </div>
-        </div>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ona Tili Platformasi</title>
+<link rel="stylesheet" href="style.css">
+</head><body><header>
+<h2>🔎 Qidiruv</h2>
+</header><section class="search-box"><input id="searchInput" placeholder="So'zni qidiring..."><div id="results"></div></section><section class="word-day"><h3>📘 Kun so'zi</h3><div id="wordDay"></div></section><nav class="bottom-nav"><a href="index.html">Qidiruv</a>
+<a href="catalog.html">Katalog</a>
+<a href="test.html">Testlar</a>
+<a href="essay.html">Esse</a>
+<a href="profile.html">Profil</a>
 
-        <div id="katalog" class="content-section">
-            <div class="top-bar">❮ <span>Mavzular katalogi</span></div>
-            <div id="catalog-items" class="scroll-area">
-                </div>
-        </div>
-
-        <div id="esse" class="content-section">
-            <div class="top-bar">❮ <span>AI Esse Tekshiruvi</span> 🕒</div>
-            <div class="esse-box">
-                <div class="topic-label">TANLANGAN MAVZU</div>
-                <h4>Ona tilining milliy o'zlikni anglashdagi o'rni</h4>
-                <div class="input-wrap">
-                    <textarea placeholder="Inshongizni yozing..."></textarea>
-                    <span class="counter">0 / 500</span>
-                </div>
-                <button class="btn-glow">✨ AI bilan tahlil qilish</button>
-            </div>
-        </div>
-
-        <div id="reyting" class="content-section">
-            <div class="top-bar">❮ <span>Reyting</span> 🏆</div>
-            <div class="tabs">
-                <button class="active">Haftalik</button>
-                <button>Oylik</button>
-                <button>Umumiy</button>
-            </div>
-            <div class="podium">
-                <div class="rank r2"><div class="avatar"></div><p>Jasur B.</p></div>
-                <div class="rank r1"><div class="crown">👑</div><div class="avatar"></div><p>Azizbek R.</p></div>
-                <div class="rank r3"><div class="avatar"></div><p>Malika O.</p></div>
-            </div>
-        </div>
-    </div>
-
-    <nav class="navbar">
-        <div class="nav-item active" onclick="navTo('qidiruv')">🔍<br>Qidiruv</div>
-        <div class="nav-item" onclick="navTo('katalog')">📂<br>Katalog</div>
-        <div class="nav-item" onclick="navTo('esse')">✍️<br>Esse</div>
-        <div class="nav-item" onclick="navTo('reyting')">📊<br>Reyting</div>
-    </nav>
-
-    <script src="script.js"></script>
-</body>
+</nav><script src="search.js"></script></body>
 </html>
