@@ -250,7 +250,9 @@ document.getElementById(id).style.display="block";
 }
 
 </script>
-
+</body>
+</html>
+<script>
 
 /* TEST MA'LUMOTLARI */
 
@@ -260,9 +262,9 @@ fonetika: [
 
 {
 q:"Qaysi qatorda faqat jarangli undoshlar berilgan?",
-a:"b,d,g,z",
-b:"p,t,k,s",
-c:"ch,sh,x",
+a:"b, d, g, z",
+b:"p, t, k, s",
+c:"ch, sh, x",
 correct:"a"
 },
 
@@ -275,170 +277,91 @@ correct:"b"
 },
 
 {
-q:"Qaysi so‘zda diftong mavjud?",
-a:"oila",
-b:"ota",
-c:"aka",
-correct:"a"
-},
-
-{
-q:"Qaysi qatorda jarangsiz undosh bor?",
-a:"b",
-b:"d",
-c:"p",
-correct:"c"
-},
-
-{
 q:"Qaysi so‘zda urg‘u oxirgi bo‘g‘inga tushadi?",
 a:"kitob",
-b:"o‘qituvchi",
-c:"daraxt",
-correct:"a"
-},
-
-{
-q:"Qaysi tovush til orqa undoshi?",
-a:"k",
-b:"m",
-c:"v",
-correct:"a"
-},
-
-{
-q:"Qaysi qatorda portlovchi undosh bor?",
-a:"b",
-b:"l",
-c:"y",
-correct:"a"
-},
-
-{
-q:"Qaysi tovush lab undoshi?",
-a:"b",
-b:"k",
-c:"g",
-correct:"a"
-},
-
-{
-q:"Qaysi so‘zda 3 bo‘g‘in bor?",
-a:"kitob",
 b:"maktab",
-c:"universitet",
-correct:"c"
+c:"o‘qituvchi",
+correct:"a"
 },
 
 {
-q:"Qaysi qatorda sirg‘aluvchi undosh bor?",
-a:"s",
-b:"b",
-c:"d",
-correct:"a"
+q:"Jarangsiz undoshlar qaysi qatorda?",
+a:"b,d,g",
+b:"p,t,k",
+c:"m,n,l",
+correct:"b"
+},
+
+{
+q:"Bo‘g‘in nechta turga bo‘linadi?",
+a:"2",
+b:"3",
+c:"4",
+correct:"b"
 }
 
 ],
+
 
 leksikologiya: [
 
 {
 q:"Sinonim nima?",
-a:"Ma'nosi yaqin so‘z",
-b:"Ma'nosi qarama qarshi",
-c:"Ko‘p ma'noli so‘z",
-correct:"a"
+a:"ma’nosi qarama-qarshi so‘z",
+b:"ma’nosi o‘xshash so‘z",
+c:"eski so‘z",
+correct:"b"
 },
 
 {
 q:"Antonim nima?",
-a:"Ma'nosi qarama qarshi so‘z",
-b:"Bir xil ma'noli so‘z",
-c:"Ko‘chma ma'noli",
-correct:"a"
-},
-
-{
-q:"Ko‘p ma'noli so‘z nima?",
-a:"Bir nechta ma'noga ega",
-b:"Bir ma'noli",
-c:"Faqat ilmiy so‘z",
-correct:"a"
-},
-
-{
-q:"Frazeologizm nima?",
-a:"Barqaror birikma",
-b:"Oddiy so‘z",
-c:"Yangi so‘z",
-correct:"a"
-},
-
-{
-q:"Dialekt so‘z nima?",
-a:"Hududiy so‘z",
-b:"Adabiy so‘z",
-c:"Ilmiy so‘z",
-correct:"a"
-},
-
-{
-q:"Termin nima?",
-a:"Ilmiy so‘z",
-b:"Oddiy so‘z",
-c:"Sheva so‘z",
+a:"qarama-qarshi ma’noli so‘z",
+b:"bir xil ma’noli so‘z",
+c:"yangi so‘z",
 correct:"a"
 },
 
 {
 q:"Arxaizm nima?",
-a:"Eskirgan so‘z",
-b:"Yangi so‘z",
-c:"Ko‘chma so‘z",
+a:"yangi so‘z",
+b:"eskirib qolgan so‘z",
+c:"qarama qarshi so‘z",
+correct:"b"
+},
+
+{
+q:"Paronim nima?",
+a:"talaffuzi o‘xshash so‘z",
+b:"bir xil so‘z",
+c:"eski so‘z",
 correct:"a"
 },
 
 {
-q:"Neologizm nima?",
-a:"Yangi so‘z",
-b:"Eski so‘z",
-c:"Sinonim",
-correct:"a"
-},
-
-{
-q:"Omonim nima?",
-a:"Bir xil yozilib boshqa ma'no",
-b:"Sinonim",
-c:"Antonim",
-correct:"a"
-},
-
-{
-q:"Leksikologiya nimani o‘rganadi?",
-a:"So‘z boyligini",
-b:"Gapni",
-c:"Harflarni",
+q:"Dialektizm nima?",
+a:"shevaga xos so‘z",
+b:"ilmiy so‘z",
+c:"rasmiy so‘z",
 correct:"a"
 }
 
 ]
 
-}
+};
 
-/* TEST KO'RSATISH */
+
+/* TESTNI CHIQARISH */
 
 function showTest(section){
 
-const box = document.getElementById("testPage")
+const box = document.getElementById("testContainer");
 
-let html = "<h2>"+section+" testlari</h2>"
+let html = "<h3>"+section+" testlari</h3>";
 
 tests[section].forEach((t,i)=>{
 
 html += `
-
-<div class="card">
+<div style="background:white;padding:15px;margin:10px 0;border-radius:10px">
 
 <p>${i+1}. ${t.q}</p>
 
@@ -449,12 +372,11 @@ html += `
 <label><input type="radio" name="q${i}"> ${t.c}</label>
 
 </div>
+`;
 
-`
+});
 
-})
-
-box.innerHTML = html
+box.innerHTML = html;
 
 }
 
