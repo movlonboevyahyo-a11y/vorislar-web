@@ -4,466 +4,274 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Vorislar</title>
-
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
 <style>
 body{margin:0;font-family:system-ui;background:#eef2f7;padding-bottom:80px}
-
 .page{display:none;padding:18px}
 .page.active{display:block}
-
-.banner{
-background:linear-gradient(135deg,#4a7cf3,#2f60d8);
-color:#fff;
-padding:22px;
-border-radius:18px;
-margin:10px 0
-}
-
-.card{
-background:#fff;
-padding:14px;
-border-radius:12px;
-margin:10px 0;
-box-shadow:0 3px 8px rgba(0,0,0,.06)
-}
-
-.catalog-card{
-display:flex;
-align-items:center;
-gap:10px
-}
-
-input.search{
-width:100%;
-padding:14px;
-border-radius:14px;
-border:none;
-font-size:16px;
-margin:8px 0
-}
-
-button{
-padding:10px 14px;
-border:none;
-border-radius:10px;
-background:#3a6df0;
-color:#fff;
-margin:5px
-}
-
+.banner{background:linear-gradient(135deg,#4a7cf3,#2f60d8);color:#fff;padding:22px;border-radius:18px;margin:10px 0}
+.card{background:#fff;padding:14px;border-radius:12px;margin:10px 0;box-shadow:0 3px 8px rgba(0,0,0,.06)}
+input.search{width:100%;padding:14px;border-radius:14px;border:none;font-size:16px;margin:8px 0}
+button{padding:10px 14px;border:none;border-radius:10px;background:#3a6df0;color:#fff;margin:5px}
 .btn-gray{background:#e3e7ee;color:#333}
 .btn-prem{background:#ffb300;color:#000}
-
 .correct{background:#d4edda}
 .wrong{background:#f8d7da}
-
-.material-icons{
-font-size:22px;
-vertical-align:middle
-}
-
-.nav{
-position:fixed;
-bottom:0;
-left:0;
-right:0;
-height:60px;
-background:#fff;
-display:flex;
-justify-content:space-around;
-align-items:center;
-box-shadow:0 -2px 10px rgba(0,0,0,.1)
-}
-
-.nav button{
-background:none;
-color:#333;
-font-size:12px
-}
-
-.topic{
-display:block;
-width:100%;
-text-align:left;
-background:#3a6df0
-}
-
-textarea{
-width:100%;
-height:180px;
-border-radius:12px;
-padding:10px;
-border:none
-}
-
+.nav{position:fixed;bottom:0;left:0;right:0;height:60px;background:#fff;display:flex;justify-content:space-around;align-items:center;box-shadow:0 -2px 10px rgba(0,0,0,.1)}
+.nav button{background:none;color:#333;font-size:13px}
+.topic{display:block;width:100%;text-align:left;background:#3a6df0}
+textarea{width:100%;height:200px;border-radius:12px;padding:10px;border:none}
 small.muted{color:#777}
-
+.list-item{padding:8px 0;border-bottom:1px solid #eee}
 </style>
 </head>
-
 <body>
 
 <!-- QIDIRUV -->
 <div id="searchPage" class="page active">
-
 <h2>Qidiruv</h2>
-
 <div class="banner">
 <p>MILLIY SERTIFIKAT</p>
 <h2>Ona tili xazinasidan izlang</h2>
 </div>
 
 <input class="search" placeholder="So'zni qidiring...">
-
-<div class="card">
-<b>Kun so‘zi:</b>
-<b>Ma’rifat</b>
-<br>
-<small class="muted">
-Bilim va madaniyatni yoyish; kishilarning ongini oshirish.
-</small>
+<div id="wordList"></div>
 </div>
 
-<div class="card">Istiqlol</div>
-<div class="card">Ziyo</div>
-<div class="card">Tafakkur</div>
-<div class="card">Adolat</div>
-<div class="card">Vatanparvarlik</div>
-<div class="card">Ma’naviyat</div>
-<div class="card">Ziyraklik</div>
-<div class="card">Muruvvat</div>
-<div class="card">Sadoqat</div>
-
-</div>
-
-
-<!-- KATALOG -->
+<!-- KATALOG / STIKER -->
 <div id="catalogPage" class="page">
-
 <h2>Katalog</h2>
-
-<div class="card catalog-card">
-<span class="material-icons">menu_book</span>
-Fonetika
+<button class="topic" onclick="showCatalog('fonetika')">📚 Fonetika</button>
+<button class="topic" onclick="showCatalog('leksika')">📚 Leksika</button>
+<button class="topic" onclick="showCatalog('morfologiya')">📚 Morfologiya</button>
+<button class="topic" onclick="showCatalog('sintaksis')">📚 Sintaksis</button>
+<button class="topic" onclick="showCatalog('imlo')">📚 Imlo</button>
+<div id="catalogBox"></div>
 </div>
-
-<div class="card catalog-card">
-<span class="material-icons">library_books</span>
-Leksikologiya
-</div>
-
-<div class="card catalog-card">
-<span class="material-icons">spellcheck</span>
-Morfologiya
-</div>
-
-<div class="card catalog-card">
-<span class="material-icons">format_list_numbered</span>
-Sintaksis
-</div>
-
-<div class="card catalog-card">
-<span class="material-icons">edit_note</span>
-Imlo qoidalari
-</div>
-
-<div class="card catalog-card">
-<span class="material-icons">school</span>
-Milliy sertifikat tayyorlov
-</div>
-
-</div>
-
 
 <!-- TEST -->
 <div id="testPage" class="page">
-
 <h2>Test bo‘limlari</h2>
-
-<button class="topic" onclick="startTest('fonetika')">
-<span class="material-icons">record_voice_over</span> Fonetika
-</button>
-
-<button class="topic" onclick="startTest('leksika')">
-<span class="material-icons">menu_book</span> Leksikologiya
-</button>
-
-<button class="topic" onclick="startTest('morfologiya')">
-<span class="material-icons">spellcheck</span> Morfologiya
-</button>
-
-<button class="topic" onclick="startTest('sintaksis')">
-<span class="material-icons">format_list_numbered</span> Sintaksis
-</button>
-
-<button class="topic" onclick="startTest('imlo')">
-<span class="material-icons">edit</span> Imlo
-</button>
-
+<button class="topic" onclick="startTest('fonetika')">Fonetika</button>
+<button class="topic" onclick="startTest('leksika')">Leksika</button>
+<button class="topic" onclick="startTest('morfologiya')">Morfologiya</button>
+<button class="topic" onclick="startTest('sintaksis')">Sintaksis</button>
+<button class="topic" onclick="startTest('imlo')">Imlo</button>
 <div id="testBox"></div>
-
 </div>
-
 
 <!-- ESSE -->
 <div id="essayPage" class="page">
-
 <h2>Esse</h2>
-
 <div class="card">
-
-<b>Tanlang:</b>
-
 <select id="essayTopic">
-
 <option>Ona tilining milliy o‘zlikni anglashdagi o‘rni</option>
 <option>Ma’naviyat va yoshlar kelajagi</option>
 <option>Kitob mutolaasi tafakkurni qanday boyitadi?</option>
 <option>Til va millat taraqqiyoti</option>
 <option>Globallashuv davrida milliy qadriyatlar</option>
-<option>Yangi O‘zbekistonda yoshlarning roli</option>
 <option>Ilm – taraqqiyot poydevori</option>
+<option>Yangi O‘zbekistonda yoshlarning roli</option>
 <option>Axborot asrida tanqidiy fikrlash</option>
 <option>Madaniyat va jamiyat uyg‘unligi</option>
 <option>Adabiyot inson ruhiyatini qanday shakllantiradi?</option>
-
 </select>
-
 </div>
-
-<textarea placeholder="Inshongizni shu yerga yozing..."></textarea>
-
+<textarea placeholder="Esseni shu yerga yozing..."></textarea>
 <div class="card">
-<button class="btn-prem">AI bilan tekshirish (Premium)</button>
-<small class="muted">Demo tugma – ishlashi shart emas.</small>
+<button class="btn-prem">AI bilan tekshirish (Demo)</button>
+<small class="muted">Demo tugma – backend talab qiladi.</small>
 </div>
-
 </div>
-
 
 <!-- REYTING -->
 <div id="ratingPage" class="page">
-
 <h2>Reyting</h2>
-
-<div class="card"><b>1.</b> Azizbek R. — 2850 ball</div>
-<div class="card"><b>2.</b> Jasur B. — 2450 ball</div>
-<div class="card"><b>3.</b> Malika O. — 2100 ball</div>
-<div class="card"><b>4.</b> Sevara K. — 1920 ball</div>
-<div class="card"><b>5.</b> Bobur M. — 1850 ball</div>
-<div class="card"><b>6.</b> Dilnoza S. — 1740 ball</div>
-
+<div class="card">1. Azizbek — 2850</div>
+<div class="card">2. Jasur — 2450</div>
+<div class="card">3. Malika — 2100</div>
+<div class="card">4. Sevara — 1920</div>
+<div class="card">5. Bobur — 1850</div>
 </div>
-
 
 <!-- PROFIL -->
 <div id="profilePage" class="page">
-
 <h2>Profil</h2>
-
-<div class="card">
-Ball:
-<b><span id="score">0</span></b>
-</div>
-
+<div class="card">Ball: <b><span id="score">0</span></b></div>
 <div class="card">
 <button class="btn-prem">Premiumga o‘tish</button>
 </div>
-
 <div class="card btn-gray">Profilni tahrirlash</div>
 <div class="card btn-gray">Do‘stlarni taklif qilish</div>
 <div class="card btn-gray">Sozlamalar</div>
 <div class="card btn-gray">Ilova haqida</div>
-
 </div>
-
 
 <!-- MENU -->
-
 <div class="nav">
-
-<button onclick="openPage('searchPage')">
-<span class="material-icons">search</span>
-Qidiruv
-</button>
-
-<button onclick="openPage('catalogPage')">
-<span class="material-icons">menu_book</span>
-Katalog
-</button>
-
-<button onclick="openPage('testPage')">
-<span class="material-icons">quiz</span>
-Test
-</button>
-
-<button onclick="openPage('essayPage')">
-<span class="material-icons">edit</span>
-Esse
-</button>
-
-<button onclick="openPage('profilePage')">
-<span class="material-icons">person</span>
-Profil
-</button>
-
+<button onclick="openPage('searchPage')">Qidiruv</button>
+<button onclick="openPage('catalogPage')">Katalog</button>
+<button onclick="openPage('testPage')">Test</button>
+<button onclick="openPage('essayPage')">Esse</button>
+<button onclick="openPage('profilePage')">Profil</button>
 </div>
 
-
 <script>
-
-/* SAHIFA ALMASHTIRISH */
-
+/* PAGE SWITCH */
 function openPage(id){
-
-document.querySelectorAll(".page")
-.forEach(p=>p.classList.remove("active"))
-
-document.getElementById(id)
-.classList.add("active")
-
+document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"))
+document.getElementById(id).classList.add("active")
 }
 
-/* TEST MA'LUMOTLARI */
+/* WORD DATA */
+const words=[
+{w:"Ma’rifat",m:"Bilim va madaniyatni yoyish"},
+{w:"Istiqlol",m:"Mustaqillik"},
+{w:"Ziyo",m:"Ma’naviy nur"},
+{w:"Tafakkur",m:"Fikrlash qobiliyati"},
+{w:"Adolat",m:"Haqiqatga moslik"},
+{w:"Vatanparvarlik",m:"Vatanga muhabbat"},
+{w:"Ma’naviyat",m:"Ruhiy qadriyatlar"},
+{w:"Ziyraklik",m:"Tez anglash qobiliyati"},
+{w:"Muruvvat",m:"Mehribonlik"},
+{w:"Sadoqat",m:"Sodiqlik"}
+]
 
+/* SEARCH */
+const wordList=document.getElementById("wordList")
+function renderWords(list){
+let html=""
+list.forEach(s=>{
+html+=`<div class="card"><b>${s.w}</b><br><small>${s.m}</small></div>`
+})
+wordList.innerHTML=html
+}
+renderWords(words)
+
+document.querySelector(".search").addEventListener("input",function(){
+let val=this.value.toLowerCase()
+let filtered=words.filter(s=>s.w.toLowerCase().includes(val))
+renderWords(filtered)
+})
+
+/* KATALOG / STIKER */
+const catalog={
+fonetika:["Unli tovushlar","Undosh tovushlar","Bo‘g‘in","Urg‘u","Fonema","Grafema","Jarangli undosh","Jarangsiz undosh","Lab undoshlari","Til undoshlari"],
+leksika:["Sinonim","Antonim","Omonim","Paronim","Frazeologizm","Termin","Neologizm","Arxaizm","Dialektizm","Ko‘p ma’noli so‘z"],
+morfologiya:["Ot","Sifat","Son","Olmosh","Fe’l","Ravish","Bog‘lovchi","Yuklama","Undov","Modal so‘z"],
+sintaksis:["Gap","Ega","Kesim","To‘ldiruvchi","Aniqlovchi","Hol","So‘z birikmasi","Oddiy gap","Qo‘shma gap","Gap turlari"],
+imlo:["Alifbo","Imlo qoidalari","Nuqta","Vergul","So‘roq belgisi","Undov belgisi","Chiziqcha","Qo‘shtirnoq","Tire","Tinish belgilar"]
+}
+
+function showCatalog(name){
+let html=""
+catalog[name].forEach((t,i)=>{
+html+=`<div class="card list-item">${i+1}. ${t}</div>`
+})
+document.getElementById("catalogBox").innerHTML=html
+}
+
+/* TEST DATA (5×10 = 50) */
 const tests={
-
 fonetika:[
-{q:"O‘zbek tilida nechta unli fonema mavjud?",a:"5",b:"6",c:"7",t:"b"},
-{q:"Jarangli undosh qaysi?",a:"p",b:"b",c:"k",t:"b"},
-{q:"Jarangsiz undosh qaysi?",a:"t",b:"g",c:"d",t:"a"},
-{q:"Bo‘g‘in hosil qiluvchi tovush?",a:"undosh",b:"unli",c:"ikkalasi",t:"b"},
-{q:"Urg‘u nima?",a:"tovush kuchi",b:"so‘z turi",c:"gap turi",t:"a"},
-{q:"Fonema nima?",a:"nutq tovushi",b:"ma’no farqlovchi tovush",c:"harf",t:"b"},
-{q:"Lab undoshlari?",a:"b,p,m",b:"t,d",c:"s,z",t:"a"},
-{q:"So‘z boshida kelmaydigan undosh?",a:"ng",b:"b",c:"m",t:"a"},
-{q:"Bo‘g‘in turlari?",a:"2",b:"3",c:"4",t:"b"},
+{q:"O‘zbek tilida nechta unli tovush bor?",a:"5",b:"6",c:"7",t:"b"},
+{q:"Jarangli undosh?",a:"p",b:"b",c:"k",t:"b"},
+{q:"Jarangsiz undosh?",a:"t",b:"g",c:"d",t:"a"},
+{q:"Fonema nima?",a:"tovush",b:"so‘z",c:"gap",t:"a"},
+{q:"Bo‘g‘in nima?",a:"tovush birligi",b:"so‘z turi",c:"gap turi",t:"a"},
+{q:"Urg‘u nima?",a:"tovush kuchi",b:"gap turi",c:"so‘z turi",t:"a"},
+{q:"Lab undoshi?",a:"b",b:"s",c:"r",t:"a"},
+{q:"Til undoshi?",a:"t",b:"m",c:"b",t:"a"},
+{q:"Unli tovush?",a:"a",b:"t",c:"k",t:"a"},
 {q:"Fonetika nimani o‘rganadi?",a:"tovush",b:"so‘z",c:"gap",t:"a"}
 ],
-
 leksika:[
-{q:"Sinonim nima?",a:"qarama",b:"ma’nodosh",c:"eski",t:"b"},
+{q:"Sinonim nima?",a:"ma’nodosh",b:"qarama",c:"eski",t:"a"},
 {q:"Antonim nima?",a:"qarama-qarshi",b:"ma’nodosh",c:"yangi",t:"a"},
 {q:"Omonim nima?",a:"bir xil shakl",b:"qarama",c:"eski",t:"a"},
-{q:"Arxaizm nima?",a:"eski so‘z",b:"yangi so‘z",c:"termin",t:"a"},
-{q:"Neologizm nima?",a:"yangi so‘z",b:"sheva",c:"qarama",t:"a"},
-{q:"Termin nima?",a:"ilmiy atama",b:"sheva",c:"eski",t:"a"},
-{q:"Frazeologizm nima?",a:"ibora",b:"gap",c:"so‘z",t:"a"},
-{q:"Dialektizm nima?",a:"shevaga xos so‘z",b:"ilmiy",c:"qarama",t:"a"},
-{q:"Paronim nima?",a:"talaffuzi o‘xshash",b:"qarama",c:"yangi",t:"a"},
-{q:"Leksikologiya nimani o‘rganadi?",a:"so‘z",b:"tovush",c:"gap",t:"a"}
+{q:"Frazeologizm?",a:"ibora",b:"gap",c:"tovush",t:"a"},
+{q:"Termin?",a:"ilmiy so‘z",b:"sheva",c:"eski",t:"a"},
+{q:"Arxaizm?",a:"eski so‘z",b:"yangi",c:"ilmiy",t:"a"},
+{q:"Neologizm?",a:"yangi",b:"eski",c:"sheva",t:"a"},
+{q:"Dialektizm?",a:"sheva",b:"ilmiy",c:"qarama",t:"a"},
+{q:"Paronim?",a:"o‘xshash",b:"qarama",c:"yangi",t:"a"},
+{q:"Leksika nimani o‘rganadi?",a:"so‘z",b:"tovush",c:"gap",t:"a"}
 ],
-
 morfologiya:[
 {q:"Ot nimani bildiradi?",a:"predmet",b:"harakat",c:"belgi",t:"a"},
-{q:"Fe’l nimani bildiradi?",a:"harakat",b:"predmet",c:"son",t:"a"},
-{q:"Sifat nimani bildiradi?",a:"belgi",b:"harakat",c:"predmet",t:"a"},
-{q:"Son nimani bildiradi?",a:"miqdor",b:"belgi",c:"harakat",t:"a"},
-{q:"Olmosh nimani almashtiradi?",a:"ot",b:"fe’l",c:"sifat",t:"a"},
-{q:"Ravish nimani bildiradi?",a:"harakat belgisini",b:"predmet",c:"son",t:"a"},
-{q:"Bog‘lovchi vazifasi?",a:"bog‘laydi",b:"ajratadi",c:"son",t:"a"},
-{q:"Yuklama nima qiladi?",a:"kuchaytiradi",b:"bog‘laydi",c:"ajratadi",t:"a"},
-{q:"Undov so‘z nimani bildiradi?",a:"his",b:"son",c:"harakat",t:"a"},
-{q:"Modal so‘z nimani bildiradi?",a:"munosabat",b:"predmet",c:"harakat",t:"a"}
+{q:"Fe’l nimani bildiradi?",a:"harakat",b:"predmet",c:"belgi",t:"a"},
+{q:"Sifat nimani bildiradi?",a:"belgi",b:"harakat",c:"son",t:"a"},
+{q:"Son nimani bildiradi?",a:"miqdor",b:"harakat",c:"belgi",t:"a"},
+{q:"Olmosh?",a:"ot o‘rnida",b:"fe’l o‘rnida",c:"son o‘rnida",t:"a"},
+{q:"Ravish?",a:"harakat belgisi",b:"predmet",c:"son",t:"a"},
+{q:"Bog‘lovchi?",a:"bog‘laydi",b:"ajratadi",c:"so‘z yasaydi",t:"a"},
+{q:"Yuklama?",a:"kuchaytiradi",b:"bog‘laydi",c:"son bildiradi",t:"a"},
+{q:"Undov?",a:"his",b:"son",c:"predmet",t:"a"},
+{q:"Modal so‘z?",a:"munosabat",b:"predmet",c:"harakat",t:"a"}
 ],
-
 sintaksis:[
 {q:"Gap nima?",a:"fikr",b:"tovush",c:"so‘z",t:"a"},
 {q:"Ega savoli?",a:"kim?",b:"qayer?",c:"qachon?",t:"a"},
-{q:"Kesim nimani bildiradi?",a:"harakat",b:"predmet",c:"belgi",t:"a"},
-{q:"To‘ldiruvchi savoli?",a:"kimni?",b:"qayerda?",c:"qachon?",t:"a"},
-{q:"Hol nimani bildiradi?",a:"harakat holatini",b:"predmet",c:"son",t:"a"},
-{q:"Aniqlovchi nimani bildiradi?",a:"belgini",b:"harakat",c:"miqdor",t:"a"},
+{q:"Kesim?",a:"harakat",b:"predmet",c:"belgi",t:"a"},
+{q:"To‘ldiruvchi?",a:"kimni?",b:"qayerda?",c:"qachon?",t:"a"},
+{q:"Hol?",a:"qachon?",b:"kim?",c:"nima?",t:"a"},
+{q:"Aniqlovchi?",a:"belgi",b:"harakat",c:"miqdor",t:"a"},
 {q:"So‘z birikmasi?",a:"2 so‘z",b:"3 gap",c:"1 tovush",t:"a"},
 {q:"Qo‘shma gap?",a:"2 gap",b:"1 gap",c:"1 so‘z",t:"a"},
 {q:"Oddiy gap?",a:"1 kesim",b:"2 kesim",c:"3 kesim",t:"a"},
 {q:"Sintaksis nimani o‘rganadi?",a:"gap",b:"tovush",c:"harf",t:"a"}
 ],
-
 imlo:[
 {q:"Imlo nima?",a:"yozish qoidasi",b:"o‘qish",c:"tovush",t:"a"},
-{q:"Alifbo nima?",a:"harflar tizimi",b:"so‘z",c:"gap",t:"a"},
-{q:"Vergul qaysi belgi?",a:"tinish",b:"harf",c:"son",t:"a"},
-{q:"Nuqta qayerda qo‘yiladi?",a:"gap oxirida",b:"so‘z boshida",c:"o‘rtada",t:"a"},
-{q:"So‘roq belgisi nimani bildiradi?",a:"savol",b:"his",c:"buyruq",t:"a"},
-{q:"Undov belgisi nimani bildiradi?",a:"his",b:"savol",c:"son",t:"a"},
-{q:"Chiziqcha nima?",a:"tinish belgisi",b:"harf",c:"son",t:"a"},
-{q:"Qo‘shtirnoq qayerda ishlatiladi?",a:"iqtibosda",b:"sonda",c:"harakatda",t:"a"},
-{q:"Imlo qoidasi qayerda ishlatiladi?",a:"yozishda",b:"o‘qishda",c:"gapda",t:"a"},
-{q:"Tinish belgilar vazifasi?",a:"gapni ajratish",b:"so‘z yasash",c:"tovush",t:"a"}
+{q:"Alifbo?",a:"harflar tizimi",b:"so‘z",c:"gap",t:"a"},
+{q:"Tinish belgisi?",a:"nuqta",b:"harf",c:"son",t:"a"},
+{q:"Vergul?",a:"tinish",b:"harf",c:"son",t:"a"},
+{q:"Nuqta?",a:"tinish",b:"harf",c:"so‘z",t:"a"},
+{q:"So‘roq belgisi?",a:"?",b:".",c:",",t:"a"},
+{q:"Undov belgisi?",a:"!",b:",",c:".",t:"a"},
+{q:"Chiziqcha?",a:"-",b:"!",c:"?",t:"a"},
+{q:"Qo‘shtirnoq?",a:"\"",b:"-",c:"!",t:"a"},
+{q:"Imlo qoidasi qayerda ishlatiladi?",a:"yozishda",b:"o‘qishda",c:"gapda",t:"a"}
 ]
-
 }
 
-/* TEST BOSHLASH */
-
+/* TEST START */
 function startTest(name){
-
 let html=""
-
-tests[name].forEach((t,i)=>{
-
+let arr=[...tests[name]]
+arr.sort(()=>Math.random()-0.5)
+arr.forEach((t,i)=>{
 html+=`
-<div class="card" id="qbox${i}">
-
+<div class="card" id="q${i}">
 <p><b>${i+1}. ${t.q}</b></p>
-
 <label><input type="radio" name="q${i}" value="a"> ${t.a}</label><br>
-
 <label><input type="radio" name="q${i}" value="b"> ${t.b}</label><br>
-
 <label><input type="radio" name="q${i}" value="c"> ${t.c}</label>
-
-</div>
-`
-
+</div>`
 })
-
 html+=`<button onclick="finishTest('${name}')">Testni tugatish</button>`
-
 document.getElementById("testBox").innerHTML=html
-
 }
 
-
-/* TESTNI TEKSHIRISH */
-
+/* TEST CHECK */
 function finishTest(name){
-
 let score=0
-
 tests[name].forEach((t,i)=>{
-
 let ans=document.querySelector('input[name="q'+i+'"]:checked')
-
-let box=document.getElementById("qbox"+i)
-
-if(ans && ans.value===t.t){
-
-score++
-
-box.classList.add("correct")
-
-}else{
-
-box.classList.add("wrong")
-
-}
-
+let box=document.getElementById("q"+i)
+if(ans && ans.value===t.t){score++;box.classList.add("correct")}
+else{box.classList.add("wrong")}
 })
-
 document.getElementById("testBox").innerHTML+=
 `<div class="card"><b>Natija: ${score}/10</b></div>`
-
-localStorage.setItem("ball",score)
-
-document.getElementById("score").innerText=score
-
+let total=(Number(localStorage.getItem("ball"))||0)+score
+localStorage.setItem("ball",total)
+document.getElementById("score").innerText=total
 }
 
 /* PROFIL BALL */
-
 document.getElementById("score").innerText=
 localStorage.getItem("ball")||0
+</script>
+</body>
+</html>
