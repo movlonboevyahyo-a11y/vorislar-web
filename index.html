@@ -326,12 +326,144 @@ document.getElementById(id)
 
 }
 
-/* PROFILDA BALL */
+/* TEST MA'LUMOTLARI */
 
-document.getElementById("score")
-.innerText=localStorage.getItem("ball")||0
+const tests={
 
-</script>
+fonetika:[
+{q:"O‘zbek tilida nechta unli fonema mavjud?",a:"5",b:"6",c:"7",t:"b"},
+{q:"Jarangli undosh qaysi?",a:"p",b:"b",c:"k",t:"b"},
+{q:"Jarangsiz undosh qaysi?",a:"t",b:"g",c:"d",t:"a"},
+{q:"Bo‘g‘in hosil qiluvchi tovush?",a:"undosh",b:"unli",c:"ikkalasi",t:"b"},
+{q:"Urg‘u nima?",a:"tovush kuchi",b:"so‘z turi",c:"gap turi",t:"a"},
+{q:"Fonema nima?",a:"nutq tovushi",b:"ma’no farqlovchi tovush",c:"harf",t:"b"},
+{q:"Lab undoshlari?",a:"b,p,m",b:"t,d",c:"s,z",t:"a"},
+{q:"So‘z boshida kelmaydigan undosh?",a:"ng",b:"b",c:"m",t:"a"},
+{q:"Bo‘g‘in turlari?",a:"2",b:"3",c:"4",t:"b"},
+{q:"Fonetika nimani o‘rganadi?",a:"tovush",b:"so‘z",c:"gap",t:"a"}
+],
 
-</body>
-</html>
+leksika:[
+{q:"Sinonim nima?",a:"qarama",b:"ma’nodosh",c:"eski",t:"b"},
+{q:"Antonim nima?",a:"qarama-qarshi",b:"ma’nodosh",c:"yangi",t:"a"},
+{q:"Omonim nima?",a:"bir xil shakl",b:"qarama",c:"eski",t:"a"},
+{q:"Arxaizm nima?",a:"eski so‘z",b:"yangi so‘z",c:"termin",t:"a"},
+{q:"Neologizm nima?",a:"yangi so‘z",b:"sheva",c:"qarama",t:"a"},
+{q:"Termin nima?",a:"ilmiy atama",b:"sheva",c:"eski",t:"a"},
+{q:"Frazeologizm nima?",a:"ibora",b:"gap",c:"so‘z",t:"a"},
+{q:"Dialektizm nima?",a:"shevaga xos so‘z",b:"ilmiy",c:"qarama",t:"a"},
+{q:"Paronim nima?",a:"talaffuzi o‘xshash",b:"qarama",c:"yangi",t:"a"},
+{q:"Leksikologiya nimani o‘rganadi?",a:"so‘z",b:"tovush",c:"gap",t:"a"}
+],
+
+morfologiya:[
+{q:"Ot nimani bildiradi?",a:"predmet",b:"harakat",c:"belgi",t:"a"},
+{q:"Fe’l nimani bildiradi?",a:"harakat",b:"predmet",c:"son",t:"a"},
+{q:"Sifat nimani bildiradi?",a:"belgi",b:"harakat",c:"predmet",t:"a"},
+{q:"Son nimani bildiradi?",a:"miqdor",b:"belgi",c:"harakat",t:"a"},
+{q:"Olmosh nimani almashtiradi?",a:"ot",b:"fe’l",c:"sifat",t:"a"},
+{q:"Ravish nimani bildiradi?",a:"harakat belgisini",b:"predmet",c:"son",t:"a"},
+{q:"Bog‘lovchi vazifasi?",a:"bog‘laydi",b:"ajratadi",c:"son",t:"a"},
+{q:"Yuklama nima qiladi?",a:"kuchaytiradi",b:"bog‘laydi",c:"ajratadi",t:"a"},
+{q:"Undov so‘z nimani bildiradi?",a:"his",b:"son",c:"harakat",t:"a"},
+{q:"Modal so‘z nimani bildiradi?",a:"munosabat",b:"predmet",c:"harakat",t:"a"}
+],
+
+sintaksis:[
+{q:"Gap nima?",a:"fikr",b:"tovush",c:"so‘z",t:"a"},
+{q:"Ega savoli?",a:"kim?",b:"qayer?",c:"qachon?",t:"a"},
+{q:"Kesim nimani bildiradi?",a:"harakat",b:"predmet",c:"belgi",t:"a"},
+{q:"To‘ldiruvchi savoli?",a:"kimni?",b:"qayerda?",c:"qachon?",t:"a"},
+{q:"Hol nimani bildiradi?",a:"harakat holatini",b:"predmet",c:"son",t:"a"},
+{q:"Aniqlovchi nimani bildiradi?",a:"belgini",b:"harakat",c:"miqdor",t:"a"},
+{q:"So‘z birikmasi?",a:"2 so‘z",b:"3 gap",c:"1 tovush",t:"a"},
+{q:"Qo‘shma gap?",a:"2 gap",b:"1 gap",c:"1 so‘z",t:"a"},
+{q:"Oddiy gap?",a:"1 kesim",b:"2 kesim",c:"3 kesim",t:"a"},
+{q:"Sintaksis nimani o‘rganadi?",a:"gap",b:"tovush",c:"harf",t:"a"}
+],
+
+imlo:[
+{q:"Imlo nima?",a:"yozish qoidasi",b:"o‘qish",c:"tovush",t:"a"},
+{q:"Alifbo nima?",a:"harflar tizimi",b:"so‘z",c:"gap",t:"a"},
+{q:"Vergul qaysi belgi?",a:"tinish",b:"harf",c:"son",t:"a"},
+{q:"Nuqta qayerda qo‘yiladi?",a:"gap oxirida",b:"so‘z boshida",c:"o‘rtada",t:"a"},
+{q:"So‘roq belgisi nimani bildiradi?",a:"savol",b:"his",c:"buyruq",t:"a"},
+{q:"Undov belgisi nimani bildiradi?",a:"his",b:"savol",c:"son",t:"a"},
+{q:"Chiziqcha nima?",a:"tinish belgisi",b:"harf",c:"son",t:"a"},
+{q:"Qo‘shtirnoq qayerda ishlatiladi?",a:"iqtibosda",b:"sonda",c:"harakatda",t:"a"},
+{q:"Imlo qoidasi qayerda ishlatiladi?",a:"yozishda",b:"o‘qishda",c:"gapda",t:"a"},
+{q:"Tinish belgilar vazifasi?",a:"gapni ajratish",b:"so‘z yasash",c:"tovush",t:"a"}
+]
+
+}
+
+/* TEST BOSHLASH */
+
+function startTest(name){
+
+let html=""
+
+tests[name].forEach((t,i)=>{
+
+html+=`
+<div class="card" id="qbox${i}">
+
+<p><b>${i+1}. ${t.q}</b></p>
+
+<label><input type="radio" name="q${i}" value="a"> ${t.a}</label><br>
+
+<label><input type="radio" name="q${i}" value="b"> ${t.b}</label><br>
+
+<label><input type="radio" name="q${i}" value="c"> ${t.c}</label>
+
+</div>
+`
+
+})
+
+html+=`<button onclick="finishTest('${name}')">Testni tugatish</button>`
+
+document.getElementById("testBox").innerHTML=html
+
+}
+
+
+/* TESTNI TEKSHIRISH */
+
+function finishTest(name){
+
+let score=0
+
+tests[name].forEach((t,i)=>{
+
+let ans=document.querySelector('input[name="q'+i+'"]:checked')
+
+let box=document.getElementById("qbox"+i)
+
+if(ans && ans.value===t.t){
+
+score++
+
+box.classList.add("correct")
+
+}else{
+
+box.classList.add("wrong")
+
+}
+
+})
+
+document.getElementById("testBox").innerHTML+=
+`<div class="card"><b>Natija: ${score}/10</b></div>`
+
+localStorage.setItem("ball",score)
+
+document.getElementById("score").innerText=score
+
+}
+
+/* PROFIL BALL */
+
+document.getElementById("score").innerText=
+localStorage.getItem("ball")||0
