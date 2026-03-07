@@ -192,35 +192,65 @@ font-size:14px;
 
 <!-- ESSE -->
 <div id="essayPage"> class="page"><div class="header">Esse yozish</div><div class="card">Bu yerga esse tizimi qo'shiladi
-  <nav>
+  <nav style="
+position:fixed;
+bottom:0;
+left:0;
+right:0;
+height:60px;
+background:white;
+display:flex;
+justify-content:space-around;
+align-items:center;
+box-shadow:0 -2px 10px rgba(0,0,0,0.1);
+">
 
-<button onclick="openPage('searchPage')">Qidiruv</button>
+<button onclick="openPage('searchPage')" style="
+background:none;
+border:none;
+font-size:14px;
+">Qidiruv</button>
 
-<button onclick="openPage('catalogPage')">Katalog</button>
+<button onclick="openPage('catalogPage')" style="
+background:none;
+border:none;
+font-size:14px;
+">Katalog</button>
 
-<button onclick="openPage('testPage')">Test</button>
+<button onclick="openPage('testPage')" style="
+background:none;
+border:none;
+font-size:14px;
+">Test</button>
 
-<button onclick="openPage('essayPage')">Esse</button>
+<button onclick="openPage('essayPage')" style="
+background:none;
+border:none;
+font-size:14px;
+">Esse</button>
 
-<button onclick="openPage('profilePage')">Profil</button>
+<button onclick="openPage('profilePage')" style="
+background:none;
+border:none;
+font-size:14px;
+">Profil</button>
 
-  </nav>
+</nav>
 
-</nav><script>
+<script>
 
 function openPage(id){
 
 document.querySelectorAll(".page").forEach(p=>{
-p.classList.remove("active")
-})
+p.style.display="none";
+});
 
-document.getElementById(id).classList.add("active")
+document.getElementById(id).style.display="block";
 
 }
 
-</script></body>
-</html>
-<script>
+</script>
+
 
 /* TEST MA'LUMOTLARI */
 
