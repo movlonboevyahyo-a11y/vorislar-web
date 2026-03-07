@@ -1,383 +1,256 @@
-<!DOCTYPE html><html lang="uz">
-<head><meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Ona tili platformasi</title><style>
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 
-*{
-box-sizing:border-box;
-font-family:system-ui;
-}
+<title>Vorislar</title>
+
+<style>
 
 body{
 margin:0;
-background:#eef2f7;
-color:#222;
+font-family:system-ui;
+background:#eef2f6;
+padding-bottom:80px;
 }
-
-/* PAGE */
 
 .page{
 display:none;
-padding:16px;
-padding-bottom:90px;
+padding:20px;
 }
 
 .active{
 display:block;
 }
 
-/* HEADER */
-
-.header{
-font-size:22px;
-font-weight:600;
-margin-bottom:16px;
+.card{
+background:white;
+padding:15px;
+border-radius:14px;
+margin:10px 0;
+box-shadow:0 3px 8px rgba(0,0,0,0.05);
 }
-
-/* BANNER */
 
 .banner{
-background:linear-gradient(135deg,#4fa3ff,#2962ff);
+background:linear-gradient(135deg,#4a7cf3,#2f60d8);
 color:white;
-padding:20px;
+padding:25px;
 border-radius:20px;
-margin-bottom:14px;
+margin-bottom:15px;
 }
 
-.banner small{
-opacity:.9;
-}
-
-.banner h2{
-margin-top:5px;
-font-size:20px;
-}
-
-/* SEARCH */
-
-.searchbox{
-background:white;
-padding:14px;
-border-radius:14px;
-box-shadow:0 4px 10px rgba(0,0,0,.08);
-margin-bottom:14px;
-}
-
-.searchbox input{
+.search{
 width:100%;
+padding:15px;
 border:none;
-outline:none;
+border-radius:14px;
 font-size:16px;
 }
 
-/* FILTER */
-
-.filters{
-display:flex;
-gap:8px;
-margin-bottom:14px;
-}
-
-.filter{
-background:#dfe5f0;
-padding:7px 14px;
-border-radius:14px;
-font-size:14px;
-}
-
-/* CARD */
-
-.card{
-background:white;
-padding:14px;
-border-radius:14px;
-box-shadow:0 4px 10px rgba(0,0,0,.08);
-margin-bottom:14px;
-}
-
-/* HISTORY */
-
-.history div{
-background:white;
-padding:12px;
-border-radius:10px;
-margin-bottom:8px;
-}
-
-/* CATALOG */
-
-.catalog-card{
-background:white;
-padding:16px;
-border-radius:16px;
-box-shadow:0 4px 10px rgba(0,0,0,.08);
-display:flex;
-justify-content:space-between;
-align-items:center;
-margin-bottom:12px;
-}
-
-.catalog-card img{
-width:60px;
-}
-
-/* PROFILE */
-
-.profile{
-text-align:center;
-}
-
-.avatar{
-width:90px;
-height:90px;
-border-radius:50%;
-background:#dfe5f0;
-margin:auto;
-margin-bottom:10px;
-}
-
-/* BOX */
-
-.box{
-background:white;
-padding:14px;
-border-radius:14px;
-box-shadow:0 4px 10px rgba(0,0,0,.08);
-margin-bottom:10px;
-}
-
-/* NAVBAR */
-
-nav{
-position:fixed;
-bottom:0;
-width:100%;
-background:white;
-display:flex;
-justify-content:space-around;
-padding:12px;
-box-shadow:0 -2px 10px rgba(0,0,0,.1);
-}
-
-nav button{
+button{
+padding:12px 16px;
 border:none;
-background:none;
-font-size:14px;
+border-radius:10px;
+background:#3a6df0;
+color:white;
+margin:5px;
 }
 
-</style></head><body><!-- QIDIRUV --><div id="searchPage" class="page active"><div class="header">Qidiruv</div><div class="banner"><small>MILLIY SERTIFIKAT</small>
-
-<h2>Ona tili xazinasidan izlang</h2></div><div class="searchbox"><input placeholder="So'zni qidiring..."></div><div class="filters"><div class="filter">Barchasi</div><div class="filter">Sinonimlar</div><div class="filter">Antonimlar</div></div><div class="card"><b>Ma'rifat</b>
-
-<p>Bilim va madaniyatni yoyish; kishilarning ongini oshirish.</p></div><div class="history"><div>Istiqlol</div><div>Ziyo</div></div></div><!-- KATALOG --><div id="catalogPage" class="page"><div class="header">Mavzular katalogi</div><div class="catalog-card"><div><b>Grammatika</b>
-
-<p>Morfologiya va sintaksis</p></div><img src="https://cdn-icons-png.flaticon.com/512/1828/1828919.png"></div><div class="catalog-card"><div><b>Ilmiy matn</b>
-
-<p>Matn tahlili</p></div><img src="https://cdn-icons-png.flaticon.com/512/1048/1048941.png"></div><div class="catalog-card"><div><b>Badiiy matn</b>
-
-<p>Adabiy asar tahlili</p></div><img src="https://cdn-icons-png.flaticon.com/512/29/29302.png"></div><div class="catalog-card"><div><b>Imlo va lug'at</b>
-
-<p>Sertifikat darajasidagi so'zlar</p></div><img src="https://cdn-icons-png.flaticon.com/512/3135/3135755.png"></div></div><!-- TEST --><div id="testPage" class="page"><div class="header">Testlar</div><div class="card">Bu yerga keyin testlar qo'shiladi
-
-<!-- TEST PAGE -->
-<div id="testPage" class="page">
-
-<h2>Testlar</h2>
-
-<button onclick="showTest('fonetika')">Fonetika</button>
-<button onclick="showTest('leksikologiya')">Leksikologiya</button>
-
-<div id="testContainer"></div>
-
-</div>
-
-<!-- ESSE -->
-<div id="essayPage"> class="page"><div class="header">Esse yozish</div><div class="card">Bu yerga esse tizimi qo'shiladi
-  <nav style="
+.nav{
 position:fixed;
 bottom:0;
 left:0;
 right:0;
-height:60px;
 background:white;
+height:60px;
 display:flex;
 justify-content:space-around;
 align-items:center;
 box-shadow:0 -2px 10px rgba(0,0,0,0.1);
-">
+}
 
-<button onclick="openPage('searchPage')" style="
+.nav button{
 background:none;
-border:none;
+color:#333;
 font-size:14px;
-">Qidiruv</button>
+}
 
-<button onclick="openPage('catalogPage')" style="
-background:none;
-border:none;
-font-size:14px;
-">Katalog</button>
+</style>
+</head>
 
-<button onclick="openPage('testPage')" style="
-background:none;
-border:none;
-font-size:14px;
-">Test</button>
+<body>
 
-<button onclick="openPage('essayPage')" style="
-background:none;
-border:none;
-font-size:14px;
-">Esse</button>
+<!-- QIDIRUV -->
+<div id="searchPage" class="page active">
 
-<button onclick="openPage('profilePage')" style="
-background:none;
-border:none;
-font-size:14px;
-">Profil</button>
+<h2>Qidiruv</h2>
 
-</nav>
+<div class="banner">
+<p>MILLIY SERTIFIKAT</p>
+<h2>Ona tili xazinasidan izlang</h2>
+</div>
+
+<input class="search" placeholder="So'zni qidiring...">
+
+<div class="card">
+<b>Ma'rifat</b>
+<p>Bilim va madaniyatni yoyish; kishilarning ongini oshirish.</p>
+</div>
+
+<div class="card">Istiqlol</div>
+<div class="card">Ziyo</div>
+
+</div>
+
+<!-- TEST PAGE -->
+<div id="testPage" class="page">
+
+<h2>Test bo‘limlari</h2>
+
+<button onclick="startTest('fonetika')">Fonetika</button>
+<button onclick="startTest('leksika')">Leksikologiya</button>
+<button onclick="startTest('morfologiya')">Morfologiya</button>
+<button onclick="startTest('sintaksis')">Sintaksis</button>
+<button onclick="startTest('imlo')">Imlo</button>
+
+<div id="testBox"></div>
+
+</div>
+
+<!-- ESSE -->
+<div id="essayPage" class="page">
+<h2>Esse</h2>
+<textarea style="width:100%;height:200px;border-radius:10px;padding:10px"></textarea>
+</div>
+
+<!-- PROFIL -->
+<div id="profilePage" class="page">
+
+<h2>Profil</h2>
+
+<div class="card">Profilni tahrirlash</div>
+<div class="card">Do‘stlarni taklif qilish</div>
+<div class="card">Ilova haqida</div>
+
+</div>
+
+<!-- MENU -->
+
+<div class="nav">
+
+<button onclick="openPage('searchPage')">Qidiruv</button>
+<button onclick="openPage('testPage')">Test</button>
+<button onclick="openPage('essayPage')">Esse</button>
+<button onclick="openPage('profilePage')">Profil</button>
+
+</div>
 
 <script>
 
 function openPage(id){
 
-document.querySelectorAll(".page").forEach(p=>{
-p.style.display="none";
-});
+document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"))
 
-document.getElementById(id).style.display="block";
+document.getElementById(id).classList.add("active")
 
 }
 
-</script>
-</body>
-</html>
-<script>
+/* TESTLAR */
 
-/* TEST MA'LUMOTLARI */
+const tests={
 
-const tests = {
-
-fonetika: [
-
-{
-q:"Qaysi qatorda faqat jarangli undoshlar berilgan?",
-a:"b, d, g, z",
-b:"p, t, k, s",
-c:"ch, sh, x",
-correct:"a"
-},
-
-{
-q:"O‘zbek tilida nechta unli tovush bor?",
-a:"5",
-b:"6",
-c:"7",
-correct:"b"
-},
-
-{
-q:"Qaysi so‘zda urg‘u oxirgi bo‘g‘inga tushadi?",
-a:"kitob",
-b:"maktab",
-c:"o‘qituvchi",
-correct:"a"
-},
-
-{
-q:"Jarangsiz undoshlar qaysi qatorda?",
-a:"b,d,g",
-b:"p,t,k",
-c:"m,n,l",
-correct:"b"
-},
-
-{
-q:"Bo‘g‘in nechta turga bo‘linadi?",
-a:"2",
-b:"3",
-c:"4",
-correct:"b"
-}
-
+fonetika:[
+{q:"O‘zbek tilida nechta unli?",a:"5",b:"6",c:"7",t:"b"},
+{q:"Jarangli undosh?",a:"b",b:"p",c:"t",t:"a"},
+{q:"Jarangsiz undosh?",a:"g",b:"z",c:"k",t:"c"},
+{q:"Bo‘g‘in nechta tur?",a:"2",b:"3",c:"4",t:"b"},
+{q:"Urg‘u nima?",a:"tovush",b:"bo‘g‘in",c:"ajratish",t:"b"},
+{q:"Unli tovush?",a:"a",b:"b",c:"d",t:"a"},
+{q:"Jarangsiz?",a:"t",b:"m",c:"n",t:"a"},
+{q:"Fonetika nimani o‘rganadi?",a:"tovush",b:"so‘z",c:"gap",t:"a"},
+{q:"Nutq tovushi?",a:"fonema",b:"grafema",c:"so‘z",t:"a"},
+{q:"Bo‘g‘in nima?",a:"tovush birligi",b:"so‘z",c:"gap",t:"a"}
 ],
 
+leksika:[
+{q:"Sinonim?",a:"o‘xshash",b:"qarama",c:"eski",t:"a"},
+{q:"Antonim?",a:"o‘xshash",b:"qarama",c:"bir xil",t:"b"},
+{q:"Paronim?",a:"o‘xshash talaffuz",b:"qarama",c:"yangi",t:"a"},
+{q:"Arxaizm?",a:"yangi",b:"eski",c:"ilmiy",t:"b"},
+{q:"Dialektizm?",a:"sheva",b:"kitob",c:"ilmiy",t:"a"},
+{q:"Leksika?",a:"so‘zlar",b:"tovush",c:"gap",t:"a"},
+{q:"Neologizm?",a:"yangi",b:"eski",c:"qarama",t:"a"},
+{q:"Omonim?",a:"bir xil",b:"qarama",c:"yangi",t:"a"},
+{q:"Frazeologizm?",a:"ibora",b:"so‘z",c:"gap",t:"a"},
+{q:"Termin?",a:"ilmiy",b:"oddiy",c:"sheva",t:"a"}
+],
 
-leksikologiya: [
+morfologiya:[
+{q:"Ot nima?",a:"predmet",b:"harakat",c:"belgi",t:"a"},
+{q:"Fe'l?",a:"harakat",b:"predmet",c:"belgi",t:"a"},
+{q:"Sifat?",a:"belgi",b:"harakat",c:"predmet",t:"a"},
+{q:"Son?",a:"miqdor",b:"belgi",c:"harakat",t:"a"},
+{q:"Olmosh?",a:"ot o‘rnida",b:"harakat",c:"son",t:"a"},
+{q:"Ravish?",a:"harakat belgisi",b:"predmet",c:"son",t:"a"},
+{q:"Bog‘lovchi?",a:"bog‘laydi",b:"ajratadi",c:"ko‘rsatadi",t:"a"},
+{q:"Yuklama?",a:"kuchaytiradi",b:"bog‘laydi",c:"son",t:"a"},
+{q:"Modal so‘z?",a:"munosabat",b:"predmet",c:"harakat",t:"a"},
+{q:"Undov?",a:"his",b:"son",c:"belgi",t:"a"}
+],
 
-{
-q:"Sinonim nima?",
-a:"ma’nosi qarama-qarshi so‘z",
-b:"ma’nosi o‘xshash so‘z",
-c:"eski so‘z",
-correct:"b"
-},
+sintaksis:[
+{q:"Gap nima?",a:"fikr",b:"so‘z",c:"tovush",t:"a"},
+{q:"Ega?",a:"kim",b:"qachon",c:"qayer",t:"a"},
+{q:"Kesim?",a:"harakat",b:"predmet",c:"son",t:"a"},
+{q:"To‘ldiruvchi?",a:"kimni",b:"qachon",c:"qayer",t:"a"},
+{q:"Hol?",a:"qachon",b:"kim",c:"nima",t:"a"},
+{q:"Aniqlovchi?",a:"belgi",b:"harakat",c:"miqdor",t:"a"},
+{q:"So‘z birikmasi?",a:"2 so‘z",b:"3 gap",c:"1 gap",t:"a"},
+{q:"Qo‘shma gap?",a:"2 gap",b:"1 so‘z",c:"1 tovush",t:"a"},
+{q:"Oddiy gap?",a:"1 kesim",b:"2 kesim",c:"3 kesim",t:"a"},
+{q:"Sintaksis?",a:"gap",b:"tovush",c:"harf",t:"a"}
+],
 
-{
-q:"Antonim nima?",
-a:"qarama-qarshi ma’noli so‘z",
-b:"bir xil ma’noli so‘z",
-c:"yangi so‘z",
-correct:"a"
-},
-
-{
-q:"Arxaizm nima?",
-a:"yangi so‘z",
-b:"eskirib qolgan so‘z",
-c:"qarama qarshi so‘z",
-correct:"b"
-},
-
-{
-q:"Paronim nima?",
-a:"talaffuzi o‘xshash so‘z",
-b:"bir xil so‘z",
-c:"eski so‘z",
-correct:"a"
-},
-
-{
-q:"Dialektizm nima?",
-a:"shevaga xos so‘z",
-b:"ilmiy so‘z",
-c:"rasmiy so‘z",
-correct:"a"
-}
-
+imlo:[
+{q:"Imlo?",a:"yozish",b:"o‘qish",c:"gap",t:"a"},
+{q:"Harf?",a:"belgi",b:"so‘z",c:"gap",t:"a"},
+{q:"Alifbo?",a:"harflar",b:"so‘z",c:"gap",t:"a"},
+{q:"Tinish belgisi?",a:"nuqta",b:"harf",c:"son",t:"a"},
+{q:"Vergul?",a:"tinish",b:"harf",c:"son",t:"a"},
+{q:"Nuqta?",a:"tinish",b:"harf",c:"so‘z",t:"a"},
+{q:"So‘roq?",a:"?",b:".",c:",",t:"a"},
+{q:"Undov?",a:"!",b:",",c:".",t:"a"},
+{q:"Chiziqcha?",a:"-",b:"!",c:"?",t:"a"},
+{q:"Qo‘shtirnoq?",a:"\"",b:"-",c:"!",t:"a"}
 ]
 
-};
+}
 
+function startTest(name){
 
-/* TESTNI CHIQARISH */
+let html=""
 
-function showTest(section){
+tests[name].forEach((t,i)=>{
 
-const box = document.getElementById("testContainer");
-
-let html = "<h3>"+section+" testlari</h3>";
-
-tests[section].forEach((t,i)=>{
-
-html += `
-<div style="background:white;padding:15px;margin:10px 0;border-radius:10px">
-
+html+=`
+<div class="card">
 <p>${i+1}. ${t.q}</p>
 
-<label><input type="radio" name="q${i}"> ${t.a}</label><br>
-
-<label><input type="radio" name="q${i}"> ${t.b}</label><br>
-
-<label><input type="radio" name="q${i}"> ${t.c}</label>
+<label><input type="radio" name="q${i}">${t.a}</label><br>
+<label><input type="radio" name="q${i}">${t.b}</label><br>
+<label><input type="radio" name="q${i}">${t.c}</label>
 
 </div>
-`;
+`
 
-});
+})
 
-box.innerHTML = html;
+document.getElementById("testBox").innerHTML=html
 
 }
 
 </script>
+
+</body>
+</html>
