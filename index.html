@@ -1,21 +1,215 @@
 <!DOCTYPE html><html lang="uz">
 <head><meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Ona tili platformasi</title><link rel="stylesheet" href="css/style.css"></head><body><!-- QIDIRUV PAGE --><div id="searchPage" class="page active"><h2>Qidiruv</h2><div class="banner">
-<h3>Milliy sertifikat</h3>
-<p>Ona tili xazinasidan izlang</p>
-</div><div class="search-box">
-<input id="searchInput" placeholder="So'zni qidiring...">
-</div><div class="card">
-<h3>Kun so'zi</h3>
-<div id="wordDay"></div>
-</div><div class="card">
-<h3>Oxirgi qidiruvlar</h3>
-<div id="recent"></div>
-</div></div><!-- KATALOG PAGE --><div id="catalogPage" class="page"><h2>Mavzular katalogi</h2><div id="catalogList"></div><div id="topicList"></div></div><!-- TEST PAGE --><div id="testPage" class="page"><h2>Testlar</h2><div id="testBox"></div></div><!-- ESSE PAGE --><div id="essayPage" class="page"><h2>Esse yozish</h2><textarea id="essayInput" placeholder="Esse yozing"></textarea><p>So'zlar soni: <span id="wordCount">0</span></p></div><!-- PROFIL PAGE --><div id="profilePage" class="page"><h2>Profil</h2><img src="https://i.pravatar.cc/100"><p>Azizbek Toirov</p><p>B2 daraja</p></div><!-- NAVBAR --><nav><button onclick="showPage('searchPage')">Qidiruv</button>
-<button onclick="showPage('catalogPage')">Katalog</button>
-<button onclick="showPage('testPage')">Testlar</button>
-<button onclick="showPage('essayPage')">Esse</button>
-<button onclick="showPage('profilePage')">Profil</button>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Ona tili platformasi</title><style>
 
-</nav><script src="js/app.js"></script></body>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:system-ui;
+}
+
+body{
+background:#f3f6fb;
+color:#222;
+}
+
+/* HEADER */
+
+.header{
+padding:20px;
+font-size:20px;
+font-weight:600;
+}
+
+/* PAGE */
+
+.page{
+display:none;
+padding:16px;
+padding-bottom:90px;
+}
+
+.active{
+display:block;
+}
+
+/* SEARCH BANNER */
+
+.banner{
+background:linear-gradient(135deg,#4fa3ff,#1a6bff);
+color:white;
+padding:20px;
+border-radius:20px;
+margin-bottom:16px;
+}
+
+.banner small{
+opacity:.8;
+}
+
+.banner h2{
+margin-top:4px;
+}
+
+/* SEARCH */
+
+.searchbox{
+background:white;
+padding:14px;
+border-radius:14px;
+box-shadow:0 3px 10px rgba(0,0,0,.08);
+margin-bottom:14px;
+}
+
+.searchbox input{
+width:100%;
+border:none;
+outline:none;
+font-size:16px;
+}
+
+/* FILTERS */
+
+.filters{
+display:flex;
+gap:8px;
+margin-bottom:14px;
+}
+
+.filter{
+background:#e8edf7;
+padding:6px 12px;
+border-radius:12px;
+font-size:13px;
+}
+
+/* CARD */
+
+.card{
+background:white;
+border-radius:14px;
+padding:14px;
+box-shadow:0 3px 10px rgba(0,0,0,.08);
+margin-bottom:14px;
+}
+
+/* HISTORY */
+
+.history{
+display:flex;
+flex-direction:column;
+gap:8px;
+}
+
+.history div{
+background:white;
+padding:12px;
+border-radius:10px;
+}
+
+/* CATALOG */
+
+.catalog-card{
+background:white;
+padding:16px;
+border-radius:16px;
+box-shadow:0 3px 10px rgba(0,0,0,.08);
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:12px;
+}
+
+.catalog-card img{
+width:60px;
+}
+
+/* PROFILE */
+
+.profile{
+text-align:center;
+}
+
+.profile img{
+width:90px;
+border-radius:50%;
+margin-bottom:10px;
+}
+
+/* BOX */
+
+.box{
+background:white;
+padding:14px;
+border-radius:14px;
+box-shadow:0 3px 10px rgba(0,0,0,.08);
+margin-bottom:10px;
+}
+
+/* NAVBAR */
+
+nav{
+position:fixed;
+bottom:0;
+width:100%;
+background:white;
+display:flex;
+justify-content:space-around;
+padding:10px;
+box-shadow:0 -2px 10px rgba(0,0,0,.08);
+}
+
+nav button{
+border:none;
+background:none;
+font-size:13px;
+}
+
+</style></head><body><!-- QIDIRUV PAGE --><div id="searchPage" class="page active"><div class="header">Qidiruv</div><div class="banner"><small>MILLIY SERTIFIKAT</small>
+
+<h2>Ona tili xazinasidan izlang</h2></div><div class="searchbox">
+<input placeholder="So'zni qidiring...">
+</div><div class="filters">
+<div class="filter">Barchasi</div>
+<div class="filter">Sinonimlar</div>
+<div class="filter">Antonimlar</div>
+</div><div class="card"><b>Ma'rifat</b>
+
+<p>Bilim va madaniyatni yoyish; kishilarning ongini oshirish.</p></div><div class="history"><div>Istiqlol</div>
+<div>Ziyo</div></div></div><!-- KATALOG PAGE --><div id="catalogPage" class="page"><div class="header">Mavzular katalogi</div><div class="catalog-card"><div><b>Grammatika</b>
+
+<p>Morfologiya va sintaksis</p></div><img src="https://cdn-icons-png.flaticon.com/512/1828/1828919.png"></div><div class="catalog-card"><div><b>Ilmiy matn</b>
+
+<p>Matn tahlili</p></div><img src="https://cdn-icons-png.flaticon.com/512/1048/1048941.png"></div><div class="catalog-card"><div><b>Badiiy matn</b>
+
+<p>Adabiy tahlil</p></div><img src="https://cdn-icons-png.flaticon.com/512/29/29302.png"></div><div class="catalog-card"><div><b>Imlo va lug'at</b>
+
+<p>So'z boyligi</p></div><img src="https://cdn-icons-png.flaticon.com/512/3135/3135755.png"></div></div><!-- TEST PAGE --><div id="testPage" class="page"><div class="header">Testlar</div><div class="card">Bu yerga keyin testlar qo'shiladi
+
+</div></div><!-- ESSE PAGE --><div id="essayPage" class="page"><div class="header">Esse yozish</div><div class="card">Bu yerga esse tizimi qo'shiladi
+
+</div></div><!-- PROFIL PAGE --><div id="profilePage" class="page"><div class="header">Profil</div><div class="profile"><img src="https://i.pravatar.cc/150"><h3>Azizbek Toirov</h3><p>Sertifikat darajasi: B2</p></div><div class="box">Profilni tahrirlash</div><div class="box">Do'stlarni taklif qilish</div><div class="box">Ilova haqida</div></div><nav><button onclick="openPage('searchPage')">Qidiruv</button>
+
+<button onclick="openPage('catalogPage')">Katalog</button>
+
+<button onclick="openPage('testPage')">Test</button>
+
+<button onclick="openPage('essayPage')">Esse</button>
+
+<button onclick="openPage('profilePage')">Profil</button>
+
+</nav><script>
+
+function openPage(id){
+
+document.querySelectorAll(".page").forEach(p=>{
+p.classList.remove("active")
+})
+
+document.getElementById(id).classList.add("active")
+
+}
+
+</script></body>
 </html>
